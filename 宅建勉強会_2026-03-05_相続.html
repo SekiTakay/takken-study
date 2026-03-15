@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宅建勉強会 第7回 相続</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reset.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/white.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/monokai.css">
+<style>
+  :root {
+    --primary: #1a5276;
+    --accent: #d4a017;
+    --danger: #c0392b;
+    --success: #1e8449;
+  }
+  .reveal h1, .reveal h2, .reveal h3 {
+    color: var(--primary);
+    font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic Pro', sans-serif;
+  }
+  .reveal { font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic Pro', sans-serif; }
+  .term-note {
+    background: #FFF7ED;
+    border-left: 4px solid #F59E0B;
+    padding: 8px 14px;
+    margin: 6px 0;
+    font-size: 0.78em;
+    color: #92400E;
+    border-radius: 0 6px 6px 0;
+    text-align: left;
+  }
+  .page-ref {
+    font-size: 0.72em;
+    color: #9CA3AF;
+    font-style: italic;
+    background: #F9FAFB;
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid #E5E7EB;
+  }
+  .exam-q {
+    background: #FEF3C7;
+    border: 2px solid #F59E0B;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 8px 0;
+    font-weight: bold;
+    color: #92400E;
+    text-align: left;
+    font-size: 0.85em;
+  }
+  .exam-choice {
+    background: #F0FDF4;
+    border: 1px solid #86EFAC;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 4px 0;
+    font-size: 0.82em;
+    color: #166534;
+    text-align: left;
+  }
+  .wrong-choice {
+    background: #FEF2F2;
+    border: 1px solid #FCA5A5;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 4px 0;
+    font-size: 0.82em;
+    color: #991B1B;
+    text-align: left;
+  }
+  .highlight-box {
+    background: linear-gradient(135deg, #1a527620, #d4a01720);
+    border: 2px solid #1a5276;
+    border-radius: 10px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    text-align: left;
+  }
+  .caution-box {
+    background: #FFF7ED;
+    border: 2px solid #F59E0B;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin: 8px 0;
+    font-size: 0.82em;
+    text-align: left;
+  }
+  .success-box {
+    background: #F0FDF4;
+    border: 2px solid #86EFAC;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin: 8px 0;
+    font-size: 0.85em;
+    text-align: left;
+  }
+  .reveal table {
+    font-size: 0.78em;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 8px 0;
+  }
+  .reveal table th {
+    background: #1a5276;
+    color: white;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+  }
+  .reveal table td {
+    padding: 7px 10px;
+    border: 1px solid #ccc;
+  }
+  .reveal table tr:nth-child(even) td { background: #EBF5FB; }
+  .badge {
+    display: inline-block;
+    background: #1a5276;
+    color: white;
+    border-radius: 12px;
+    padding: 2px 10px;
+    font-size: 0.72em;
+    font-weight: bold;
+    margin: 0 3px;
+  }
+  .badge-red { background: #c0392b; }
+  .badge-green { background: #1e8449; }
+  .badge-orange { background: #d4a017; color: #333; }
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 8px 0;
+    text-align: left;
+  }
+  .grid3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 8px 0;
+  }
+  .card {
+    border: 2px solid #1a5276;
+    border-radius: 8px;
+    padding: 10px 14px;
+    background: white;
+    font-size: 0.8em;
+  }
+  .card-title {
+    font-weight: bold;
+    color: #1a5276;
+    font-size: 1.05em;
+    border-bottom: 1px solid #1a5276;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+  }
+  .num-big {
+    font-size: 2em;
+    font-weight: bold;
+    color: #c0392b;
+  }
+  .reveal ul li, .reveal ol li {
+    font-size: 0.88em;
+    margin-bottom: 4px;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- S1: 表紙 -->
+<section>
+  <div style="margin-top:60px">
+    <p style="font-size:0.7em;color:#666;letter-spacing:2px">株式会社 NEW ERA　宅建試験勉強会</p>
+    <h1 style="font-size:1.8em;margin:20px 0 10px;color:#1a5276">第7回：相続</h1>
+    <p style="font-size:0.95em;color:#555;margin:8px 0">
+      ～「誰が・どれだけ・どう受け取るか」を体系的に理解する～
+    </p>
+    <hr style="border:1px solid #1a5276;width:60%;margin:20px auto">
+    <p style="font-size:0.8em;color:#777">2026年3月5日（木）09:00〜09:50</p>
+    <p style="font-size:0.75em;color:#999">教科書：らくらく宅建塾 p.62〜86</p>
+  </div>
+</section>
+
+<!-- S2: アジェンダ -->
+<section>
+  <h2>本日のアジェンダ</h2>
+  <div class="highlight-box" style="margin-bottom:12px">
+    <strong>🎯 今日のゴール</strong>：誰が・いくら相続するかを法律で答えられるようになる
+  </div>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">前半（25分）</div>
+      <ul style="margin:0;padding-left:18px">
+        <li>相続人の範囲と順位</li>
+        <li>代襲相続</li>
+        <li>法定相続分の計算</li>
+        <li>相続欠格・廃除</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">後半（25分）</div>
+      <ul style="margin:0;padding-left:18px">
+        <li>相続の承認・放棄</li>
+        <li>遺産分割</li>
+        <li>確認問題３問</li>
+        <li>まとめ・次回予告</li>
+      </ul>
+    </div>
+  </div>
+  <p style="font-size:0.72em;text-align:right"><span class="page-ref">📖 テキスト p.62〜86</span></p>
+</section>
+
+<!-- S3: 導入クイズ -->
+<section>
+  <h2>🤔 最初に考えてみよう！</h2>
+  <div class="exam-q" style="font-size:0.95em;margin-bottom:16px">
+    Aが亡くなりました。残された家族は<br>
+    「妻B」「長男C（既婚・子あり）」「母D」「妹E」の4人です。<br><br>
+    <strong>Q：誰がAの財産を相続しますか？</strong>
+  </div>
+  <div class="caution-box">
+    ⚡ 不動産仲介の現場でも「相続物件」は頻出！<br>
+    売主が「相続人全員」でないと売買できないケースも多い。<br>
+    誰が相続人かを即答できる力が実務にも直結します。
+  </div>
+  <p style="font-size:0.75em;color:#888;margin-top:12px">（答えはこのスライド群を進めながら確認！）</p>
+</section>
+
+<!-- S4: 相続とは？ -->
+<section>
+  <h2>相続とは？</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+    <div class="term-note" style="margin:0">
+      【被相続人】財産を遺して亡くなった人。<br>「遺した側」の人
+    </div>
+    <div class="term-note" style="margin:0">
+      【相続人】財産を受け取る資格のある人。<br>「受け取る側」の人
+    </div>
+  </div>
+  <div class="highlight-box" style="font-size:0.88em;margin-bottom:8px">
+    【相続】被相続人が持っていた財産上の権利・義務を、相続人が包括的に引き継ぐこと
+  </div>
+  <div class="grid2" style="margin-top:12px">
+    <div class="card">
+      <div class="card-title">✅ プラスの財産</div>
+      <ul style="margin:0;padding-left:16px">
+        <li>不動産（土地・建物）</li>
+        <li>預貯金・現金</li>
+        <li>株式・有価証券</li>
+        <li>賃貸収入の権利</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">⚠️ マイナスの財産</div>
+      <ul style="margin:0;padding-left:16px">
+        <li>借金・住宅ローン</li>
+        <li>未払いの税金</li>
+        <li>保証債務</li>
+      </ul>
+    </div>
+  </div>
+  <div class="caution-box" style="margin-top:10px">
+    ⚠️ 試験の罠：「プラスの財産だけ相続できる」は✗ 原則は<strong>全部まとめて</strong>承継！
+  </div>
+  <p style="font-size:0.72em;text-align:right"><span class="page-ref">📖 p.62〜63</span></p>
+</section>
+
+<!-- S5: 相続人の順位 -->
+<section>
+  <h2>相続人の範囲と順位</h2>
+  <div class="highlight-box">
+    <strong>鉄則</strong>：配偶者は<strong>常に相続人</strong>。それ以外は順位で決まる。
+  </div>
+  <div style="margin:12px 0">
+    <div class="card" style="margin-bottom:8px;border-left:4px solid #c0392b">
+      <span class="badge badge-red">第1順位</span> <strong>子（直系卑属）</strong>
+      ─ 養子・胎児・非嫡出子も含む。子がいれば第2・3順位は相続しない。
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px">
+      <div class="term-note" style="margin:0;font-size:0.75em">
+        【直系卑属（ちょっけいひぞく）】<br>自分より下の世代の血族。子・孫・ひ孫。「卑」は「低い世代」のイメージ。
+      </div>
+      <div class="term-note" style="margin:0;font-size:0.75em">
+        【直系尊属（ちょっけいそんぞく）】<br>自分より上の世代の血族。父母・祖父母。「尊」は「上の世代」のイメージ。
+      </div>
+    </div>
+    <div class="card" style="margin-bottom:8px;border-left:4px solid #d4a017">
+      <span class="badge badge-orange">第2順位</span> <strong>直系尊属</strong>（父母・祖父母）
+      ─ 子がいないときのみ。より近い親等（父母＞祖父母）が優先。
+    </div>
+    <div class="card" style="border-left:4px solid #1a5276">
+      <span class="badge">第3順位</span> <strong>兄弟姉妹</strong>
+      ─ 子も直系尊属もいないときのみ。
+    </div>
+  </div>
+  <div class="term-note">
+    【配偶者】婚姻届を出した法律上の配偶者のみ。内縁の妻・夫は相続人にならない！
+  </div>
+  <p style="font-size:0.72em;text-align:right"><span class="page-ref">📖 p.63〜65</span></p>
+</section>
+
+<!-- S6: 導入クイズ答え合わせ -->
+<section>
+  <h2>💡 導入クイズの答え</h2>
+  <div class="exam-q">
+    A死亡。残された：妻B、長男C（既婚・子あり）、母D、妹E
+  </div>
+  <div class="success-box" style="margin-top:12px;font-size:0.9em">
+    ✅ <strong>相続人：妻B + 長男C</strong><br><br>
+    ・妻B → 配偶者なので<strong>常に</strong>相続人<br>
+    ・長男C → 第1順位（子）なので相続人<br>
+    ・母D → 第2順位だが、第1順位がいるので<strong>×</strong><br>
+    ・妹E → 第3順位なので<strong>×</strong>
+  </div>
+  <div class="caution-box">
+    ⚡ 長男Cが先に亡くなっていたら？→ Cの子（Aの孫）が代わりに相続！（代襲相続）
+  </div>
+  <p style="font-size:0.72em;text-align:right"><span class="page-ref">📖 p.63〜65</span></p>
+</section>
+
+<!-- S7: 代襲相続 -->
+<section>
+  <h2>代襲相続：「代わりに受け取る」制度</h2>
+  <div class="term-note">
+    【代襲相続】本来相続人になるべき者が、相続開始前に①死亡②欠格③廃除で相続できないとき、
+    その<strong>子（孫など）</strong>が代わりに相続すること
+  </div>
+  <table>
+    <tr>
+      <th>相続人</th><th>代襲できる範囲</th><th>再代襲</th>
+    </tr>
+    <tr>
+      <td>子（第1順位）</td>
+      <td>孫・ひ孫（直系卑属）</td>
+      <td>✅ 無制限</td>
+    </tr>
+    <tr>
+      <td>兄弟姉妹（第3順位）</td>
+      <td>甥・姪（1代のみ）</td>
+      <td>❌ 甥・姪の子は×</td>
+    </tr>
+  </table>
+  <div class="highlight-box" style="margin-top:8px;font-size:0.83em">
+    ❓ <strong>なぜ「放棄」だと代襲が起きないの？</strong><br>
+    放棄は「自分の意思で断った」行為。自ら断ったのに子に受け取らせるのは、放棄した意味がない。<br>
+    一方、死亡・欠格・廃除は本人に意思がない → 子が代わりに受け取る必要がある。
+  </div>
+  <div class="caution-box">
+    ⚠️ 試験最頻出の罠：<strong>相続放棄</strong>は代襲相続の原因にならない！<br>
+    放棄した場合は「はじめから相続人でなかった」扱い→その子は代襲できない
+  </div>
+  <p style="font-size:0.72em;text-align:right"><span class="page-ref">📖 p.66〜67</span></p>
+</section>
+
+<!-- S8: 相続欠格 -->
+<section>
+  <h2>相続欠格：法律上当然に失う</h2>
+  <div class="term-note">
+    【相続欠格】一定の重大な非行をした相続人は、<strong>法律上自動的に</strong>相続権を失う
+  </div>
+  <div style="margin:10px 0;font-size:0.82em">
+    <div class="card" style="margin-bottom:6px">
+      <strong>① 故意に被相続人・先順位の相続人を死亡させた（未遂も含む）</strong>
+    </div>
+    <div class="card" style="margin-bottom:6px">
+      <strong>② 被相続人が殺害されたことを知りながら、告発・告訴しなかった</strong><br>
+      <span style="font-size:0.9em;color:#666">（配偶者・直系血族は除く）</span>
+    </div>
+    <div class="card" style="margin-bottom:6px">
+      <strong>③ 詐欺・強迫で遺言の作成・撤回・取消を妨害した</strong>
+    </div>
+    <div class="card">
+      <strong>④ 遺言書を偽造・変造・破棄・隠匿した</strong>
+    </div>
+  </div>
+  <div class="highlight-box" style="font-size:0.82em;margin-top:8px">
+    🏠 不動産実務：「遺言書を隠していた相続人」は欠格に該当することも。<br>
+    相続登記の際に欠格事由がないか確認するケースがある。
+  </div>
+  <div class="caution-box">
+    ⚡ 欠格は<strong>代襲相続の原因になる</strong>（欠格者の子は代わりに相続できる）
+  </div>
+  <p style="font-size:0.72em;text-align:right"><span class="page-ref">📖 p.67〜68</span></p>
+</section>
+
+<!-- S9: 廃除 -->
+<section>
+  <h2>廃除：被相続人の意思で排除</h2>
+  <div class="term-note">
+    【廃除】被相続人が、虐待・重大な侮辱・著しい非行をした相続人を
+    家庭裁判所に申立て、相続権を剥奪する制度
+  </div>
+  <div class="grid2" style="margin-top:12px">
+    <div class="card">
+      <div class="card-title">欠格 vs 廃除</div>
+      <ul style="margin:0;padding-left:16px">
+        <li><strong>欠格</strong>：法律上自動的に失う</li>
+        <li><strong>廃除</strong>：被相続人の意思＋家裁の審判</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">廃除できる相手</div>
+      <ul style="margin:0;padding-left:16px">
+        <li>遺留分を持つ相続人のみ</li>
+        <li>配偶者・子・直系尊属は可</li>
+        <li>兄弟姉妹は<span style="color:#c0392b;font-weight:bold">廃除不可</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="caution-box">
+    ⚠️ 兄弟姉妹に遺留分がない（後述）から、廃除しなくても遺言でゼロにできるため廃除不要<br>
+    ⚡ 廃除も<strong>代襲相続の原因になる</strong>
+  </div>
+  <p style="font-size:0.72em;text-align:right"><span class="page-ref">📖 p.68〜69</span></p>
+</section>
+
+<!-- S10: 法定相続分（基本） -->
+<section>
+  <h2>法定相続分：3パターン覚えれば完璧</h2>
+  <div class="highlight-box" style="margin-bottom:10px">
+    <strong>配偶者の相続分は組み合わせによって変わる！</strong>
+  </div>
+  <table>
+    <tr>
+      <th>組合せ</th><th>配偶者</th><th>それ以外</th>
+    </tr>
+    <tr>
+      <td>配偶者 ＋ <strong>子</strong></td>
+      <td style="text-align:center"><strong>1/2</strong></td>
+      <td style="text-align:center">1/2（子の数で均等）</td>
+    </tr>
+    <tr>
+      <td>配偶者 ＋ <strong>直系尊属</strong></td>
+      <td style="text-align:center"><strong>2/3</strong></td>
+      <td style="text-align:center">1/3（人数で均等）</td>
+    </tr>
+    <tr>
+      <td>配偶者 ＋ <strong>兄弟姉妹</strong></td>
+      <td style="text-align:center"><strong>3/4</strong></td>
+      <td style="text-align:center">1/4（人数で均等）</td>
+    </tr>
+  </table>
+  <div class="term-note" style="margin-top:10px">
+    【覚え方】配偶者の取り分は「子：半分、尊属：多め(2/3)、兄弟：もっと多め(3/4)」<br>
+    　　　　　→ 血が遠いほど配偶者が多くもらえる
+  </div>
+  <p style="font-size:0.72em;text-align:right"><span class="page-ref">📖 p.70〜72</span></p>
+</section>
+
+<!-- S11: 法定相続分 計算例 -->
+<section>
+  <h2>法定相続分の計算例</h2>
+  <div style="font-size:0.88em;margin-bottom:10px">
+    <strong>例題</strong>：Aが死亡。相続財産6,000万円。妻B、長男C、次男D（3人）
+  </div>
+  <div class="highlight-box">
+    ① 配偶者＋子 → 妻B = <span class="num-big">3,000</span>万円（1/2）<br>
+    ② 子の取り分 3,000万円 を長男C・次男D で均等分割<br>
+    　→ C = <span class="num-big">1,500</span>万円、D = <span class="num-big">1,500</span>万円
+  </div>
+  <div style="margin-top:12px;font-size:0.88em">
+    <strong>応用</strong>：次男Dが相続前に死亡、Dの子（孫E）がいた場合
+  </div>
+  <div class="success-box">
+    → Dの1,500万円をそのまま孫Eが代襲相続！<br>
+    　B=3,000万、C=1,500万、E=1,500万 （合計6,000万）
+  </div>
+  <div class="caution-box">
+    ⚠️ 非嫡出子（婚外子）の相続分 → 2013年の民法改正で<strong>嫡出子と同じ</strong>に変更！
+  </div>
+  <p style="font-size:0.72em;text-align:right"><span class="page-ref">📖 p.70〜73</span></p>
+</section>
+
+<!-- S12: 半血兄弟 -->
+<section>
+  <h2>兄弟姉妹の相続分：半血と全血</h2>
+  <div class="term-note">
+    【全血兄弟】父と母が同じ兄弟姉妹<br>
+    【半血兄弟】父または母の一方だけが同じ兄弟姉妹（異父・異母）
+  </div>
+  <div class="highlight-box" style="margin:12px 0;text-align:center;font-size:0.9em">
+    半血兄弟の相続分 ＝ 全血兄弟の <span class="num-big">1/2</span>
+  </div>
+  <div style="font-size:0.85em">
+    <strong>例</strong>：Aが死亡、相続財産900万円。子なし・配偶者なし・父母なし。<br>
+    全血兄弟B・全血兄弟C・半血兄弟D の3人が相続。
+  </div>
+  <div class="success-box" style="margin-top:8px">
+    B:C:D = 2:2:1 の比率<br>
+    → B=360万、C=360万、D=180万
+  </div>
+  <div class="caution-box">
+    ⚡ 非嫡出子と半血兄弟は別概念！非嫡出子は相続分=嫡出子と同じ（改正後）
+  </div>
+  <p style="font-size:0.72em;text-align:right"><span class="page-ref">📖 p.72〜73</span></p>
+</section>
+
+<!-- S13: 相続の承認・放棄 概要 -->
+<section>
+  <h2>相続の承認・放棄</h2>
+  <div class="term-note">
+    相続人は「どう受け取るか」を3つの中から選べる。<br>
+    原則として、<strong>相続開始を知ったときから3ヶ月以内</strong>に判断する
+  </div>
+  <div class="term-note" style="margin-top:6px">
+    【家庭裁判所】家族・親族に関する法律問題（相続・離婚・後見など）を扱う裁判所。
+    通常の民事訴訟を扱う地方裁判所とは別組織。限定承認・放棄はここに申述する。
+  </div>
+  <div class="grid3" style="margin-top:12px">
+    <div class="card" style="border-color:#1e8449">
+      <div class="card-title" style="color:#1e8449">単純承認</div>
+      <p style="margin:0;font-size:0.9em">プラス・マイナス全財産を<strong>そのまま</strong>引き継ぐ</p>
+    </div>
+    <div class="card" style="border-color:#d4a017">
+      <div class="card-title" style="color:#b7820f">限定承認</div>
+      <p style="margin:0;font-size:0.9em">プラスの範囲内でのみマイナスを引き継ぐ</p>
+    </div>
+    <div class="card" style="border-color:#c0392b">
+      <div class="card-title" style="color:#c0392b">相続放棄</div>
+      <p style="margin:0;font-size:0.9em">一切の財産を引き継がない</p>
+    </div>
+  </div>
+  <div class="caution-box" style="margin-top:12px">
+    ⚠️ 3ヶ月経過 or 相続財産を処分してしまうと → <strong>単純承認したとみなされる</strong>！<br>
+    実務でも「亡くなってすぐに預金を引き出すと…」という問題が起きます
+  </div>
+  <p style="font-size:0.72em;text-align:right"><span class="page-ref">📖 p.74〜77</span></p>
+</section>
+
+<!-- S14: 限定承認 -->
+<section>
+  <h2>限定承認のポイント</h2>
+  <div class="highlight-box">
+    財産1,000万・借金1,500万 → 限定承認なら<strong>差額500万だけ自腹</strong>！
+  </div>
+  <table style="margin:12px 0">
+    <tr><th>項目</th><th>限定承認</th><th>単純承認</th></tr>
+    <tr><td>借金の上限</td><td><strong>相続財産の範囲内</strong></td><td>無制限</td></tr>
+    <tr><td>手続き</td><td>家庭裁判所に申述<br>相続人<strong>全員</strong>で行う</td><td>不要（何もしなければ）</td></tr>
+    <tr><td>期限</td><td>3ヶ月以内</td><td>なし</td></tr>
+  </table>
+  <div class="caution-box">
+    ⚠️ 超重要：限定承認は<strong>相続人全員</strong>でしか申述できない！<br>
+    一人でもOKな相続放棄とは違う点が試験頻出
+  </div>
+  <p style="font-size:0.72em;text-align:right"><span class="page-ref">📖 p.75〜76</span></p>
+</section>
+
+<!-- S15: 相続放棄 -->
+<section>
+  <h2>相続放棄の注意点</h2>
+  <div class="term-note">
+    【相続放棄】家庭裁判所への申述により、はじめから相続人でなかったとみなされる制度
+  </div>
+  <div style="margin:12px 0;font-size:0.87em">
+    <div class="card" style="margin-bottom:8px">
+      ✅ <strong>各自単独で</strong>申述できる（全員でなくてよい）
+    </div>
+    <div class="card" style="margin-bottom:8px">
+      ✅ 放棄は<strong>撤回できない</strong>（一度確定）
+    </div>
+    <div class="card">
+      ⚠️ <strong>代襲相続は発生しない</strong>（放棄した人の子は相続できない）
+    </div>
+  </div>
+  <div class="caution-box" style="margin-top:10px">
+    ⚡ 実務例：長男が相続放棄 → 長男の子（孫）には代襲相続されない！<br>
+    一方、長男が死亡していれば孫が代襲相続できる。この違いが頻出。
+  </div>
+  <div class="highlight-box" style="margin-top:8px;font-size:0.85em">
+    🏠 不動産実務のポイント：相続物件を仲介する際は、
+    全相続人の同意が必要。放棄した人は「相続人ではない」ので同意不要！
+  </div>
+  <p style="font-size:0.72em;text-align:right"><span class="page-ref">📖 p.76〜77</span></p>
+</section>
+
+<!-- S16: 遺産分割 -->
+<section>
+  <h2>遺産分割：誰が何を受け取るか決める</h2>
+  <div class="term-note">
+    【遺産分割】相続財産を具体的に各相続人に帰属させる手続き
+  </div>
+  <div style="margin:12px 0;font-size:0.85em">
+    <div class="card" style="margin-bottom:6px;border-left:4px solid #c0392b">
+      <strong>① 遺言による分割</strong>：被相続人の遺言が最優先
+    </div>
+    <div class="card" style="margin-bottom:6px;border-left:4px solid #d4a017">
+      <strong>② 協議による分割</strong>：相続人全員の合意（書面化が原則）
+    </div>
+    <div class="card" style="border-left:4px solid #1a5276">
+      <strong>③ 審判による分割</strong>：協議が不調の場合、家庭裁判所が決定
+    </div>
+  </div>
+  <div class="highlight-box" style="margin-top:10px;font-size:0.85em">
+    ✅ 遺産分割の効果は<strong>相続開始時に遡る</strong>（遡及効）<br>
+    ✅ 被相続人は遺言で<strong>5年を超えない範囲</strong>で分割禁止を指定できる
+  </div>
+  <div class="caution-box">
+    ⚠️ 相続人全員の合意が必要 → 一人でも反対すると協議はまとまらない！
+  </div>
+  <p style="font-size:0.72em;text-align:right"><span class="page-ref">📖 p.77〜80</span></p>
+</section>
+
+<!-- S17: 承認・放棄・遺産分割 まとめ比較 -->
+<section>
+  <h2>承認・放棄・分割の比較整理</h2>
+  <table>
+    <tr>
+      <th>手続き</th><th>単独or全員</th><th>期限</th><th>撤回</th>
+    </tr>
+    <tr>
+      <td>単純承認</td><td>各自（自動）</td><td>3ヶ月で確定</td><td>不可</td>
+    </tr>
+    <tr>
+      <td>限定承認</td>
+      <td style="color:#c0392b"><strong>相続人全員</strong></td>
+      <td>3ヶ月以内・家裁申述</td>
+      <td>不可</td>
+    </tr>
+    <tr>
+      <td>相続放棄</td><td>各自・家裁申述</td><td>3ヶ月以内</td><td>不可</td>
+    </tr>
+    <tr>
+      <td>遺産分割協議</td><td>相続人全員の合意</td><td>なし（期限なし）</td><td>全員合意で可</td>
+    </tr>
+  </table>
+  <div class="caution-box" style="margin-top:10px">
+    ⚡ 「限定承認は全員」「相続放棄は各自」の対比が最頻出！<br>
+    どちらも期限は「<strong>相続開始を知ったときから</strong>3ヶ月以内」
+  </div>
+  <p style="font-size:0.72em;text-align:right"><span class="page-ref">📖 p.74〜80</span></p>
+</section>
+
+<!-- S18: 確認問題① -->
+<section>
+  <h3>確認問題①</h3>
+  <div class="exam-q">
+    【問】相続に関する次の記述のうち、<strong>正しいもの</strong>はどれか。
+  </div>
+  <div class="wrong-choice">
+    ① 内縁の配偶者は、法律婚の配偶者と同様に相続人となることができる。
+  </div>
+  <div class="wrong-choice">
+    ② 相続放棄をした者の子は、代襲相続によってその相続放棄した者に代わって相続することができる。
+  </div>
+  <div class="exam-choice">
+    ③ 限定承認は、相続人が複数いる場合、相続人全員が共同して家庭裁判所に申述しなければならない。✅
+  </div>
+  <div class="wrong-choice">
+    ④ 被相続人は、遺言によって、いかなる期間であっても遺産の分割を禁止することができる。
+  </div>
+  <p style="font-size:0.73em;color:#6B7280;margin-top:10px;text-align:left">
+    ▶ <strong>解説</strong>：①内縁は法律上の配偶者ではないため相続人にならない。②相続放棄は代襲相続の原因にならない。<strong>③正解</strong>：限定承認は全員で申述が必要。④分割禁止期間は5年以内に限られる。
+  </p>
+</section>
+
+<!-- S19: 確認問題② -->
+<section>
+  <h3>確認問題②</h3>
+  <div class="exam-q">
+    【問】A（死亡）の法定相続分に関する次の記述のうち、<strong>誤っているもの</strong>はどれか。<br>
+    AにはB（配偶者）、C（長男）、D（長女）、E（Cの子・Aの孫）がいる。CはAより先に死亡している。
+  </div>
+  <div class="wrong-choice">
+    ① Eは、Cの代わりに代襲相続人となる。
+  </div>
+  <div class="exam-choice">
+    ② Bの法定相続分は4分の3である。✅（正解：これが誤り）
+  </div>
+  <div class="wrong-choice">
+    ③ CとDが相続人だった場合、両者の相続分はそれぞれ4分の1ずつとなる。
+  </div>
+  <div class="wrong-choice">
+    ④ EがCに代わって相続する場合、EはCの相続分（4分の1）を受け取る。
+  </div>
+  <p style="font-size:0.73em;color:#6B7280;margin-top:10px;text-align:left">
+    ▶ <strong>解説</strong>：②が誤り。配偶者+子の組み合わせなのでBの相続分は<strong>1/2</strong>。3/4は兄弟姉妹との組み合わせ。実際の分割はB=1/2、E=D=1/4ずつ（Cの1/4をEが代襲）。
+  </p>
+</section>
+
+<!-- S20: 確認問題③ -->
+<section>
+  <h3>確認問題③</h3>
+  <div class="exam-q">
+    【問】相続の承認・放棄に関する次の記述のうち、<strong>正しいもの</strong>はどれか。
+  </div>
+  <div class="wrong-choice">
+    ① 相続人は、相続開始を知った日から3ヶ月以内であれば、いつでも相続放棄の撤回をすることができる。
+  </div>
+  <div class="wrong-choice">
+    ② 相続財産の一部を処分した場合でも、後から限定承認を申述することができる。
+  </div>
+  <div class="wrong-choice">
+    ③ 相続放棄は、相続人全員が共同して家庭裁判所に申述しなければならない。
+  </div>
+  <div class="exam-choice">
+    ④ 相続人が相続開始を知ってから3ヶ月以内に承認・放棄の申述をしなかった場合、単純承認したものとみなされる。✅
+  </div>
+  <p style="font-size:0.73em;color:#6B7280;margin-top:10px;text-align:left">
+    ▶ <strong>解説</strong>：①相続放棄は撤回不可。②財産処分は単純承認みなしとなり、限定承認は不可。③相続放棄は各自単独で申述できる（全員不要）。<strong>④正解</strong>：熟慮期間経過→単純承認みなし。
+  </p>
+</section>
+
+<!-- S21: 相続人不存在・特別縁故者 -->
+<section>
+  <h2>相続人がいない場合は？</h2>
+  <div class="term-note">
+    【相続人の不存在】法定相続人が誰もいない、全員が相続放棄した場合
+  </div>
+  <div style="margin:12px 0;font-size:0.87em;text-align:left">
+    <p>① 家庭裁判所が<strong>相続財産清算人</strong>を選任</p>
+    <p>② 債権者・受遺者への清算</p>
+    <p>③ <strong>特別縁故者</strong>（被相続人と同居・看護した人など）への財産分与を申立て可能</p>
+    <p>④ 残った財産は<strong>国庫に帰属</strong></p>
+  </div>
+  <div class="caution-box">
+    ⚡ 「内縁の妻は特別縁故者として申立てできる場合がある」<br>
+    ただし相続人ではないため、相続権は一切なく、あくまで家裁の判断次第
+  </div>
+  <div class="highlight-box" style="font-size:0.82em;margin-top:8px">
+    🏠 実務：相続人不存在の物件は取引が非常に複雑。<br>
+    相続財産清算人の選任・申立てが完了するまで売却不可。
+  </div>
+  <p style="font-size:0.72em;text-align:right"><span class="page-ref">📖 p.80〜81</span></p>
+</section>
+
+<!-- S22: 総合比較表 -->
+<section>
+  <h2>相続全体の整理表</h2>
+  <table style="font-size:0.76em">
+    <tr>
+      <th>論点</th><th>詳細・ポイント</th><th>試験頻出度</th>
+    </tr>
+    <tr>
+      <td>相続順位</td>
+      <td>配偶者常に相続人。子→尊属→兄弟の順</td>
+      <td style="text-align:center">★★★</td>
+    </tr>
+    <tr>
+      <td>代襲相続</td>
+      <td>死亡・欠格・廃除が原因。放棄は代襲なし</td>
+      <td style="text-align:center">★★★</td>
+    </tr>
+    <tr>
+      <td>法定相続分</td>
+      <td>3パターン。非嫡出子=嫡出子（2013改正）</td>
+      <td style="text-align:center">★★★</td>
+    </tr>
+    <tr>
+      <td>限定承認</td>
+      <td>全員申述・3ヶ月・家裁申述</td>
+      <td style="text-align:center">★★☆</td>
+    </tr>
+    <tr>
+      <td>相続放棄</td>
+      <td>各自単独・3ヶ月・代襲なし・撤回不可</td>
+      <td style="text-align:center">★★★</td>
+    </tr>
+    <tr>
+      <td>遺産分割</td>
+      <td>遺言優先・全員合意・遡及効・5年分割禁止</td>
+      <td style="text-align:center">★★☆</td>
+    </tr>
+  </table>
+  <p style="font-size:0.72em;text-align:right"><span class="page-ref">📖 p.62〜86</span></p>
+</section>
+
+<!-- S23: まとめ -->
+<section>
+  <h2>📌 本日のまとめ</h2>
+  <div class="highlight-box" style="margin-bottom:12px">
+    <strong>今日覚えるべき5つのポイント</strong>
+  </div>
+  <ol style="text-align:left;font-size:0.88em;line-height:2">
+    <li>配偶者は<strong>常に相続人</strong>。他は子→直系尊属→兄弟姉妹の順位</li>
+    <li>代襲相続は死亡・欠格・廃除がトリガー。<strong>放棄では発生しない</strong></li>
+    <li>法定相続分は3パターン。配偶者＋子は各<strong>1/2</strong></li>
+    <li>限定承認は<strong>相続人全員</strong>・相続放棄は<strong>各自単独</strong>、両方3ヶ月以内</li>
+    <li>非嫡出子の相続分は嫡出子と<strong>同じ</strong>（2013年改正）</li>
+  </ol>
+</section>
+
+<!-- S24: 次回予告 -->
+<section>
+  <h2>📅 次回予告</h2>
+  <div class="highlight-box" style="margin-bottom:16px;font-size:1em">
+    <strong>第8回：遺言・遺留分</strong>
+  </div>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">遺言</div>
+      <ul style="margin:0;padding-left:16px;font-size:0.9em">
+        <li>自筆証書遺言</li>
+        <li>公正証書遺言</li>
+        <li>秘密証書遺言</li>
+        <li>法務局保管制度</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">遺留分</div>
+      <ul style="margin:0;padding-left:16px;font-size:0.9em">
+        <li>遺留分権利者の範囲</li>
+        <li>遺留分割合の計算</li>
+        <li>遺留分侵害額請求権</li>
+        <li>1年の消滅時効</li>
+      </ul>
+    </div>
+  </div>
+  <p style="margin-top:16px;font-size:0.82em;color:#666">
+    テキスト参考：らくらく宅建塾 p.83〜86（遺留分）・p.87〜（遺言）
+  </p>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/highlight.js"></script>
+<script>
+Reveal.initialize({
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'slide',
+  transitionSpeed: 'fast',
+  width: 1200,
+  height: 700,
+  plugins: [ RevealHighlight ]
+});
+</script>
+</body>
+</html>

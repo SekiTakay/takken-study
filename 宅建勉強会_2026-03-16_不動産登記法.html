@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>宅建勉強会 第9回 不動産登記法</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reset.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/white.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/monokai.css">
+<style>
+.term-note {
+  background:#FFF7ED; border-left:4px solid #F59E0B;
+  padding:5px 10px; margin:3px 0; font-size:0.78em;
+  color:#92400E; border-radius:0 6px 6px 0;
+}
+.page-ref {
+  font-size:0.68em; color:#9CA3AF; font-style:italic;
+  background:#F9FAFB; padding:2px 6px; border-radius:4px;
+  border:1px solid #E5E7EB;
+}
+.exam-q {
+  background:#FEF3C7; border:2px solid #F59E0B;
+  border-radius:8px; padding:8px 12px; margin:5px 0;
+  font-weight:bold; color:#92400E;
+}
+.exam-choice {
+  background:#F0FDF4; border:1px solid #86EFAC;
+  border-radius:6px; padding:6px 10px; margin:3px 0;
+  font-size:0.83em; color:#166534;
+}
+.wrong-choice {
+  background:#FEF2F2; border:1px solid #FCA5A5;
+  border-radius:6px; padding:6px 10px; margin:3px 0;
+  font-size:0.83em; color:#991B1B;
+}
+.highlight-box {
+  background:linear-gradient(135deg,#667eea20,#764ba220);
+  border:2px solid #667eea; border-radius:10px;
+  padding:7px 14px; margin:4px 0;
+}
+.caution-box {
+  background:#FFF7ED; border:2px solid #F59E0B;
+  border-radius:8px; padding:6px 12px; margin:4px 0;
+  font-size:0.83em;
+}
+.slide-title { color:#1e3a5f; }
+table.ct {
+  width:100%; border-collapse:collapse; font-size:0.78em;
+}
+table.ct th {
+  background:#1e3a5f; color:white; padding:6px; text-align:center;
+}
+table.ct td {
+  border:1px solid #ccc; padding:5px; text-align:center;
+}
+table.ct tr:nth-child(even) td { background:#f1f5f9; }
+.reveal section { font-size:0.88em; }
+.q-choice {
+  background:#F3F4F6; border:1px solid #D1D5DB;
+  border-radius:6px; padding:6px 10px; margin:3px 0;
+  font-size:0.83em; color:#374151;
+}
+.answer-hint {
+  text-align:center; font-size:0.68em; color:#9CA3AF;
+  margin-top:8px; font-style:italic;
+}
+.chant-box {
+  background: linear-gradient(135deg, #1e3a5f, #2d6a4f);
+  border-radius: 10px; padding: 8px 14px; margin: 5px 0;
+  text-align: center; color: white;
+}
+.chant-box .chant-label {
+  font-size: 0.62em; letter-spacing: 2px; opacity: 0.8;
+  margin-bottom: 2px; display: block;
+}
+.chant-box .chant-text {
+  font-size: 0.92em; font-weight: bold; line-height: 1.5;
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- S1: 表紙 -->
+<section data-background-gradient="linear-gradient(135deg,#1e3a5f 0%,#2d6a4f 100%)">
+  <div style="color:white;">
+    <p style="font-size:0.6em;letter-spacing:2px;opacity:0.8;">株式会社 NEW ERA</p>
+    <h2 style="color:#fbbf24;font-size:1.4em;margin:10px 0;">宅建試験勉強会</h2>
+    <h1 style="font-size:2.2em;color:white;margin:8px 0;">第 ９ 回</h1>
+    <h2 style="color:#6ee7b7;font-size:1.5em;margin:10px 0;">不動産登記法</h2>
+    <p style="font-size:0.65em;margin-top:20px;opacity:0.85;">📅 2026年3月16日（月）9:00〜9:50　📍 東京本社 会議スペース</p>
+    <p style="font-size:0.6em;opacity:0.7;">📖 らくらく宅建塾 p.101〜120</p>
+    <p style="font-size:0.55em;margin-top:10px;opacity:0.6;background:rgba(251,191,36,0.2);display:inline-block;padding:4px 12px;border-radius:4px;">毎年必ず出る！ 重要単元 ⭐⭐⭐</p>
+  </div>
+</section>
+
+<!-- S2: アジェンダ -->
+<section>
+  <h2 class="slide-title">📋 今日のアジェンダ</h2>
+  <div class="highlight-box" style="text-align:left;margin-bottom:10px;">
+    <strong style="color:#1e3a5f;">🎯 今日のゴール：</strong>
+    <span style="font-size:0.85em;">「登記記録の構造」と「いつ・誰が・どうやって登記するか」を説明できるようになる</span>
+  </div>
+  <table class="ct">
+    <tr><th>テーマ</th><th>主な内容</th><th>重要度</th></tr>
+    <tr><td>登記記録の構造</td><td>表題部・権利部（甲区・乙区）</td><td>⭐⭐⭐</td></tr>
+    <tr><td>申請義務</td><td>いつ・誰が申請？義務の有無</td><td>⭐⭐⭐</td></tr>
+    <tr><td>登記手続</td><td>共同申請・単独申請・申請方法</td><td>⭐⭐⭐</td></tr>
+    <tr><td>登記識別情報</td><td>パスワードで不正防止</td><td>⭐⭐</td></tr>
+    <tr><td>仮登記</td><td>ツバをつける「仮の登記」と順位保全</td><td>⭐⭐⭐</td></tr>
+  </table>
+  <p class="page-ref" style="margin-top:8px;">📖 テキスト p.101〜120</p>
+</section>
+
+<!-- S3: 導入クイズ -->
+<section>
+  <h2 class="slide-title">🤔 導入クイズ</h2>
+  <div class="exam-q" style="font-size:0.9em;">
+    【問】あなたが不動産を買いました。<br>
+    「この土地は自分のモノだ！」と第三者に主張するには何が必要でしょう？
+  </div>
+  <div style="text-align:center;font-size:2.5em;margin:15px 0;">🏠 → ？ → 🌍</div>
+  <div class="caution-box" style="font-size:0.83em;">
+    💡 答え：<strong>「登記」</strong> が必要です。<br><br>
+    実は、日本では「登記」をしなくても所有権自体は発生します（売買契約で移転）。<br>
+    でも登記がないと「私の土地だ！」と<strong>第三者に対抗（主張）できない</strong>のです。<br>
+    （第5章で学習した内容ですね！）今日はその「登記」の仕組みを学びます。
+  </div>
+  <p class="page-ref" style="margin-top:8px;">📖 p.101</p>
+</section>
+
+<!-- S4: 登記記録の全体像 -->
+<section>
+  <h2 class="slide-title">📂 登記記録とは？〜全体像〜</h2>
+  <div class="term-note">【登記記録】<strong>一筆の土地</strong>または<strong>一個の建物</strong>ごとに作成される記録（電磁的に記録・登記所で保管）</div>
+  <div style="display:flex;gap:10px;margin-top:12px;">
+    <div style="flex:1;background:#e0f2fe;border-radius:8px;padding:12px;text-align:center;">
+      <p style="font-weight:bold;color:#0369a1;font-size:0.9em;">① 表題部</p>
+      <p style="font-size:0.78em;">「この不動産はどんなもの？」<br>物理的な状況を記録</p>
+      <p style="font-size:0.72em;color:#0369a1;font-weight:bold;">→ 表示登記</p>
+    </div>
+    <div style="flex:1;background:#fef3c7;border:2px solid #f59e0b;border-radius:8px;padding:12px;text-align:center;">
+      <p style="font-weight:bold;color:#92400e;font-size:0.9em;">② 権利部（甲区）</p>
+      <p style="font-size:0.78em;">「誰が所有してる？」<br><strong>所有権</strong>を記録</p>
+    </div>
+    <div style="flex:1;background:#fce7f3;border:2px solid #ec4899;border-radius:8px;padding:12px;text-align:center;">
+      <p style="font-weight:bold;color:#9d174d;font-size:0.9em;">③ 権利部（乙区）</p>
+      <p style="font-size:0.78em;">「どんな権利がある？」<br><strong>所有権以外</strong>の権利を記録</p>
+    </div>
+  </div>
+  <div class="caution-box" style="margin-top:12px;font-size:0.8em;">
+    ⚠️ 登記所には登記簿とは別に<strong>地図・建物所在図</strong>もあるが、こちらは<br>
+    数筆・数個の建物について<strong>まとめて</strong>作成してよい（登記記録とは別扱い）
+  </div>
+  <p class="page-ref">📖 p.101〜102</p>
+</section>
+
+<!-- S5: 表題部① 土地 -->
+<section>
+  <h2 class="slide-title">🌍 表題部①　土地に記録されること</h2>
+  <table class="ct" style="margin-bottom:12px;">
+    <tr><th>項目</th><th>内容</th><th>具体例</th></tr>
+    <tr><td><strong>所在</strong></td><td>どこの土地か</td><td>○○市○○町○丁目○番</td></tr>
+    <tr><td><strong>地目</strong></td><td>主な用途で区分</td><td>宅地・田・畑・山林・原野 等</td></tr>
+    <tr><td><strong>地積</strong></td><td>面積</td><td>330㎡</td></tr>
+  </table>
+  <div class="caution-box" style="font-size:0.82em;">
+    ⚠️ <strong>試験の罠：土地の価格は記録されない！</strong><br>
+    どの土地かが特定できればよいので、価格の記録は不要。
+  </div>
+  <div class="highlight-box" style="font-size:0.82em;">
+    📌 地目・地積等に<strong>変更があったとき</strong>は、所有者は <strong>1カ月以内</strong> に変更の登記を申請しなければならない（義務あり）
+  </div>
+  <p class="page-ref">📖 p.102</p>
+</section>
+
+<!-- S6: 表題部② 建物 -->
+<section>
+  <h2 class="slide-title">🏢 表題部②　建物に記録されること</h2>
+  <table class="ct" style="margin-bottom:10px;">
+    <tr><th>項目</th><th>内容</th><th>具体例</th></tr>
+    <tr><td><strong>種類</strong></td><td>主な用途</td><td>居宅・店舗・事務所・工場・倉庫 等</td></tr>
+    <tr><td><strong>構造</strong></td><td>材料・建て方</td><td>木造かわらぶき二階建て</td></tr>
+    <tr><td><strong>床面積</strong></td><td>水平投影面積</td><td>120㎡</td></tr>
+  </table>
+  <div class="term-note">
+    【床面積の測り方】壁その他の区画の<strong>中心線</strong>で囲まれた部分の水平投影面積<br>
+    ⚠️「内側線」ではなく<strong>「中心線」</strong>！　ここが試験に出るポイント
+  </div>
+  <div class="caution-box" style="font-size:0.82em;">
+    ⚠️ 建物も<strong>価格は記録されない</strong>。<br>
+    種類・構造・床面積等に変更があったときは、所有者は <strong>1カ月以内</strong> に変更の登記を申請義務あり
+  </div>
+  <p class="page-ref">📖 p.102〜103</p>
+</section>
+
+<!-- S7: 表題登記の申請義務 -->
+<section>
+  <h2 class="slide-title">⏰ 表題登記の申請義務 ─「1カ月以内」</h2>
+  <div class="term-note">【表題登記】表示に関する登記のうち、表題部に<strong>最初にされる</strong>登記</div>
+  <div style="background:#f0fdf4;border:2px solid #86efac;border-radius:8px;padding:12px;margin:10px 0;">
+    <table style="width:100%;font-size:0.82em;border-collapse:collapse;">
+      <tr><td style="padding:5px;">🏗️ <strong>建物を新築したとき</strong></td><td style="padding:5px;">→ <strong>1カ月以内</strong>に表題登記を申請</td></tr>
+      <tr style="background:#dcfce7;"><td style="padding:5px;">🔥 <strong>建物が滅失したとき</strong></td><td style="padding:5px;">→ <strong>1カ月以内</strong>に滅失の登記を申請</td></tr>
+      <tr><td style="padding:5px;">🌱 <strong>新たに生じた土地</strong>を取得したとき</td><td style="padding:5px;">→ <strong>1カ月以内</strong>に表題登記を申請</td></tr>
+      <tr style="background:#dcfce7;"><td style="padding:5px;">🏠 <strong>表題登記がない建物</strong>の所有権取得</td><td style="padding:5px;">→ <strong>1カ月以内</strong>に表題登記を申請</td></tr>
+    </table>
+  </div>
+  <div class="caution-box" style="font-size:0.8em;">
+    ⚠️ 建物が2つの登記所の管轄区域にまたがって新築された場合<br>
+    → <strong>どちらか一方</strong>の登記所が指定される（両方に申請不要）
+  </div>
+  <div class="chant-box">
+    <span class="chant-label">🎤 みんなで声に出して覚えよう！</span>
+    <span class="chant-text">「建物が　生まれた・消えた　一カ月！」</span>
+  </div>
+  <p class="page-ref">📖 p.103</p>
+</section>
+
+<!-- S8: 分筆・合筆 -->
+<section>
+  <h2 class="slide-title">🗺️ 分筆・合筆登記（土地）</h2>
+  <div style="display:flex;gap:12px;margin-top:10px;">
+    <div style="flex:1;background:#eff6ff;border-radius:8px;padding:12px;">
+      <p style="font-weight:bold;color:#1d4ed8;font-size:0.9em;">📐 分筆登記</p>
+      <p style="font-size:0.8em;">一筆の土地を数筆に<strong>分割</strong>する登記</p>
+      <p style="font-size:0.72em;color:#1d4ed8;">例：1つの土地を2つに分ける</p>
+    </div>
+    <div style="flex:1;background:#f0fdf4;border-radius:8px;padding:12px;">
+      <p style="font-weight:bold;color:#166534;font-size:0.9em;">🔗 合筆登記</p>
+      <p style="font-size:0.8em;">数筆の土地を一筆に<strong>合併</strong>する登記</p>
+      <p style="font-size:0.72em;color:#166534;">例：2つの土地を1つにまとめる</p>
+    </div>
+  </div>
+  <div class="caution-box" style="margin-top:10px;font-size:0.8em;">
+    ⚠️ <strong>分筆の注意点</strong>：A地に設定されていた抵当権はA地・B地の<strong>両方に存続</strong>（原則）<br>
+    → どちらか一方だけに存続させるには損をする<strong>抵当権者の承諾</strong>が必要
+  </div>
+  <div class="caution-box" style="font-size:0.8em;">
+    ⚠️ <strong>合筆できないケース（覚えよう）</strong><br>
+    ① 所有権の登記が<strong>ある土地</strong>と<strong>ない土地</strong>の合筆はできない<br>
+    ② <strong>地目が異なる</strong>土地（例：宅地と田）の合筆はできない
+  </div>
+  <p class="page-ref">📖 p.103</p>
+</section>
+
+<!-- S9: 権利部① 甲区・乙区 -->
+<section>
+  <h2 class="slide-title">⚖️ 権利部①　甲区と乙区</h2>
+  <div class="term-note">【権利部】権利に関する登記が記録される部分（不登法第59条）</div>
+  <div style="display:flex;gap:12px;margin-top:12px;">
+    <div style="flex:1;background:#fef3c7;border:3px solid #f59e0b;border-radius:10px;padding:15px;text-align:center;">
+      <p style="font-size:1.3em;font-weight:bold;color:#92400e;">甲 区</p>
+      <p style="font-size:0.9em;font-weight:bold;color:#92400e;margin:8px 0;">所有権</p>
+      <p style="font-size:0.72em;color:#78716c;">所有権移転・所有権保存<br>買戻し特約・共有持分 等</p>
+    </div>
+    <div style="flex:1;background:#fce7f3;border:3px solid #ec4899;border-radius:10px;padding:15px;text-align:center;">
+      <p style="font-size:1.3em;font-weight:bold;color:#9d174d;">乙 区</p>
+      <p style="font-size:0.9em;font-weight:bold;color:#9d174d;margin:8px 0;">所有権以外の権利</p>
+      <p style="font-size:0.72em;color:#78716c;">地上権・賃借権<br>(根)抵当権・配偶者居住権 等</p>
+    </div>
+  </div>
+  <div class="caution-box" style="margin-top:12px;font-size:0.82em;">
+    ⚠️ <strong>試験の罠：賃借権・配偶者居住権は「債権」だが登記できる！</strong><br>
+    「賃借権は登記することができない」→ <strong>誤り！</strong>（乙区に登記できる）
+  </div>
+  <p class="page-ref">📖 p.104〜105</p>
+</section>
+
+<!-- S10: 権利部② 登記できる権利一覧 -->
+<section>
+  <h2 class="slide-title">📋 権利部②　登記できる権利一覧</h2>
+  <table class="ct" style="margin-bottom:10px;">
+    <tr><th>登記できる権利</th><th>区分</th><th>注意点</th></tr>
+    <tr><td>所有権</td><td>甲区</td><td>—</td></tr>
+    <tr><td>地上権</td><td>乙区</td><td>—</td></tr>
+    <tr><td>賃借権</td><td>乙区</td><td>⚠️ 債権だが登記できる</td></tr>
+    <tr><td>(根)抵当権</td><td>乙区</td><td>—</td></tr>
+    <tr><td>配偶者居住権</td><td>乙区</td><td>⚠️ 債権だが登記できる</td></tr>
+  </table>
+  <div class="term-note" style="font-size:0.78em;">
+    【配偶者居住権】夫が所有する居住用建物に夫婦が住んでいた場合、夫の死亡後に残された妻が<br>
+    無償でその建物に住み続けられる権利。乙区に登記される（債権だが登記OK）。
+  </div>
+  <div class="caution-box" style="font-size:0.8em;">
+    ⚠️ 抵当権者の氏名・住所が変わったときの訂正登記 → <strong>権利部</strong>に記録<br>
+    「氏名変更だから表題部では？」 → <strong>誤り！</strong>権利に関することは全て権利部
+  </div>
+  <p class="page-ref">📖 p.105・108</p>
+</section>
+
+<!-- S11: 登記申請義務はあるか？ -->
+<section>
+  <h2 class="slide-title">❓ 権利登記の申請義務はあるか？</h2>
+  <div style="font-size:0.87em;text-align:center;margin:10px 0;">
+    「AがBに土地を売ったとき、ABは<strong>必ず</strong>所有権移転登記をしなければならないか？」
+  </div>
+  <div style="background:#fee2e2;border:2px solid #ef4444;border-radius:10px;padding:15px;text-align:center;font-size:1.1em;font-weight:bold;color:#991b1b;margin:10px 0;">
+    ❌ 権利登記の申請義務は ない！
+  </div>
+  <div class="highlight-box" style="font-size:0.83em;margin:4px 0;padding:6px 12px;">
+    理由：物権の変動（所有権が「AからB」へ移ること）が生じても、登記するかどうかは当事者の自由（私的自治の原則）
+  </div>
+  <div class="caution-box" style="margin:4px 0;font-size:0.82em;padding:6px 12px;">
+    ⚠️ <strong>例外：相続の場合だけ義務あり！</strong>　相続により不動産を取得した相続人は、所有権を取得したことを<strong>知った日から3年以内</strong>に相続登記を申請しなければならない
+  </div>
+  <div class="chant-box">
+    <span class="chant-label">🎤 みんなで声に出して覚えよう！</span>
+    <span class="chant-text">「権利は自由！　相続だけは三年以内！」</span>
+  </div>
+  <p class="page-ref">📖 p.106</p>
+</section>
+
+<!-- S12: 申請義務まとめ -->
+<section>
+  <h2 class="slide-title">🔑 申請義務まとめ（キーポイント）</h2>
+  <table class="ct" style="font-size:0.87em;margin-bottom:12px;">
+    <tr><th>登記の種類</th><th>申請義務</th><th>期限</th></tr>
+    <tr style="background:#dcfce7;"><td>建物の新築・滅失（<strong>表示登記</strong>）</td><td>✅ あり</td><td><strong>1カ月以内</strong></td></tr>
+    <tr style="background:#dcfce7;"><td>相続の登記（<strong>権利登記・例外</strong>）</td><td>✅ あり</td><td><strong>3年以内</strong></td></tr>
+    <tr style="background:#fee2e2;"><td>売買等、相続以外の権利登記</td><td>❌ なし</td><td>—</td></tr>
+  </table>
+  <div class="caution-box" style="font-size:0.83em;">
+    ⚠️「売買による所有権移転登記を必ず申請しなければならない」→ <strong>誤り！</strong>
+  </div>
+  <div class="term-note" style="font-size:0.78em;">
+    【表題部所有者】権利登記がない不動産の場合に表題部に記録される所有者名。<br>
+    これは権利登記ではないので、売買・相続があっても<strong>表題部上で名義変更はできない</strong>（権利部でやること）
+  </div>
+  <p class="page-ref">📖 p.106</p>
+</section>
+
+<!-- S13: 所有権保存登記 -->
+<section>
+  <h2 class="slide-title">📝 所有権保存登記</h2>
+  <div class="term-note">【所有権保存登記】権利部にはじめてなされる所有権の登記（権利登記）</div>
+  <p style="font-size:0.83em;margin:10px 0;">「この不動産は俺のモノだ！」と<strong>最初に</strong>宣言する登記です。</p>
+  <div style="background:#eff6ff;border-radius:8px;padding:12px;margin:10px 0;font-size:0.83em;">
+    <p style="font-weight:bold;color:#1d4ed8;">📌 所有権保存登記ができるのは誰か？</p>
+    <p>① <strong>表題部所有者</strong>（既に死亡していればその<strong>相続人</strong>）</p>
+    <p>② 所有者であることを<strong>確定判決</strong>（給付判決・確認判決どちらでもOK）で認められた者等</p>
+  </div>
+  <div class="caution-box" style="font-size:0.82em;">
+    ⚠️ <strong>試験の罠</strong>：表題部所有者から不動産を<strong>譲渡された者</strong>（購入した人）が<br>
+    <strong>いきなり</strong>自己名義で所有権保存登記をすることは<strong>原則できない！</strong><br>
+    → 表題部所有者を通じた手続きが必要（例外あり→p.140）
+  </div>
+  <p class="page-ref">📖 p.107</p>
+</section>
+
+<!-- S14: 登記の順位 -->
+<section>
+  <h2 class="slide-title">🏁 登記された権利の順位</h2>
+  <div style="background:#1e3a5f;color:white;border-radius:10px;padding:20px;text-align:center;font-size:1.1em;margin:15px 0;">
+    登記された権利の順位は<br>
+    「<strong style="color:#fbbf24;font-size:1.3em;">登記の前後</strong>」で決まる（不登法第4条）
+  </div>
+  <div style="font-size:0.83em;background:#f1f5f9;border-radius:8px;padding:12px;margin:10px 0;">
+    例：同じ土地に一番抵当権と二番抵当権がある場合<br>
+    → 先に登記した <strong>一番抵当権</strong> が優先！<br>
+    → 先に<strong>契約</strong>した方ではなく、先に<strong>登記</strong>した方が優先
+  </div>
+  <div class="term-note" style="font-size:0.8em;">
+    【登記事項証明書】登記記録をプリントアウトしたもの<br>
+    → <strong>利害関係がなくても</strong>誰でも交付請求できる（手数料は収入印紙で納付）<br>
+    → <strong>オンラインでも請求可</strong>（電子情報処理組織を使用する方法）
+  </div>
+  <p class="page-ref">📖 p.109</p>
+</section>
+
+<!-- S15: 登記手続① 申請の原則 -->
+<section>
+  <h2 class="slide-title">📬 登記手続①　申請の原則と職権</h2>
+  <div style="display:flex;gap:10px;margin:10px 0;">
+    <div style="flex:1;background:#f0fdf4;border:2px solid #86efac;border-radius:8px;padding:12px;">
+      <p style="font-weight:bold;color:#166534;font-size:0.9em;">原則：当事者の申請が必要</p>
+      <p style="font-size:0.8em;">登記は当事者が自由に決めることだから（私的自治の原則）</p>
+    </div>
+    <div style="flex:1;background:#fef3c7;border:2px solid #f59e0b;border-radius:8px;padding:12px;">
+      <p style="font-weight:bold;color:#92400e;font-size:0.9em;">例外：表示登記は職権でOK</p>
+      <p style="font-size:0.8em;">物理的状況の記録は公的なもの。登記官が職権でもできる（例：建物滅失の登記）</p>
+    </div>
+  </div>
+  <div class="caution-box" style="font-size:0.8em;">
+    ⚠️ <strong>原則と例外が「ねじれる」パターンに注意！</strong><br>
+    <strong>権利登記なのに職権OK</strong>：管轄違いの権利登記の職権抹消・登記官ミスの職権更正<br>
+    <strong>表示登記なのに職権NG</strong>：建物の分割・合併登記（建物は個人のもの）<br>
+    ※ 土地の分筆・合筆は職権でできる（土地は公共のもの）
+  </div>
+  <p class="page-ref">📖 p.110〜111</p>
+</section>
+
+<!-- S16: 登記手続② 共同申請 -->
+<section>
+  <h2 class="slide-title">🤝 登記手続②　共同申請の原則</h2>
+  <div class="term-note">【登記権利者】登記によって<strong>得</strong>をする立場（例：土地を買ったB）</div>
+  <div class="term-note">【登記義務者】登記によって<strong>損</strong>をする立場（例：土地を売ったA）</div>
+  <div style="background:#eff6ff;border-radius:8px;padding:12px;margin:10px 0;font-size:0.85em;">
+    <p style="font-weight:bold;color:#1d4ed8;">原則：登記権利者と登記義務者が<strong>共同して</strong>申請しなければならない</p>
+    <p style="font-size:0.82em;">なぜ？→ 損をするAも申請に参加することで「申請内容が真実である」と信用できるから</p>
+  </div>
+  <div class="highlight-box" style="font-size:0.82em;margin:3px 0;padding:5px 12px;">
+    💡 連帯保証人のようなイメージ：売主A（損する側）が「はい、本当です」と一緒に申請 → 信頼性が格段にアップする仕組み
+  </div>
+  <div class="caution-box" style="font-size:0.8em;margin:3px 0;padding:5px 12px;">
+    ⚠️ <strong>口頭による申請は絶対認めず（例外なし！）</strong>　→ ①オンライン申請 または ②書面申請（郵送OK・磁気ディスクもOK） のみ
+  </div>
+  <div class="chant-box">
+    <span class="chant-label">🎤 みんなで声に出して覚えよう！</span>
+    <span class="chant-text">「得する・損する　一緒に申請！　口頭だけは　絶対ダメ！」</span>
+  </div>
+  <p class="page-ref">📖 p.111〜114</p>
+</section>
+
+<!-- S17a: 単独申請OK例外9選（前半①〜⑤） -->
+<section>
+  <h2 class="slide-title">🔑 単独申請OK！例外9選　①〜⑤</h2>
+  <table class="ct" style="font-size:0.71em;">
+    <tr><th>#</th><th>登記の種類</th><th>単独申請できる理由</th></tr>
+    <tr><td>①</td><td>所有権<strong>保</strong>存登記</td><td>はじめての所有権登記なので「損をする登記義務者」が存在しない</td></tr>
+    <tr><td>②</td><td><strong>仮</strong>登記（義務者の承諾 or 裁判所の処分あり）</td><td>損をする側が「OK」と言っているから信用できる</td></tr>
+    <tr><td>③</td><td>登記名義人の住所氏名<strong>変</strong>更の登記</td><td>「鈴木花子→山田花子」は同一人物。共同申請の相手方が存在しない</td></tr>
+    <tr><td>④</td><td><strong>相</strong>続による権利移転登記</td><td>父が死亡→父（登記義務者）はもう手続きできない</td></tr>
+    <tr><td>⑤</td><td>法人の<strong>合</strong>併による権利移転登記</td><td>吸収された会社は消滅→手続きできる人がいない</td></tr>
+  </table>
+  <div class="highlight-box" style="font-size:0.78em;margin-top:5px;padding:5px 12px;">
+    💡 共通のロジック：「損をする側（登記義務者）が<strong>存在しないか、申請できない</strong>」から単独OK
+  </div>
+  <p class="page-ref">📖 p.112〜113　（後半⑥〜⑨は次ページ）</p>
+</section>
+
+<!-- S17b: 単独申請OK例外9選（後半⑥〜⑨＋ゴロ） -->
+<section>
+  <h2 class="slide-title">🔑 単独申請OK！例外9選　⑥〜⑨</h2>
+  <table class="ct" style="font-size:0.71em;margin-bottom:5px;">
+    <tr><th>#</th><th>登記の種類</th><th>単独申請できる理由</th></tr>
+    <tr><td>⑥</td><td><strong>収</strong>容による権利移転登記</td><td>国が強制的に土地取得する場合、元の所有者が協力しないこともある</td></tr>
+    <tr><td>⑦</td><td>相続人に対する<strong>遺</strong>贈による権利移転登記</td><td>「息子Aに土地を遺贈する」場合、亡くなった父に申請させることはできない</td></tr>
+    <tr><td>⑧</td><td><strong>表</strong>示登記</td><td>物理的な事実を登記するだけなので、権利の移転が伴わない</td></tr>
+    <tr><td>⑨</td><td><strong>判</strong>決による登記</td><td>給付判決があればBが一人で申請OK（確認判決は不可）</td></tr>
+  </table>
+  <div style="background:#fef3c7;border:2px solid #F59E0B;border-radius:8px;padding:5px 10px;font-size:0.78em;text-align:center;">
+    🎵 ゴロ：「楽勝　<strong>他の変装が周囲に評判</strong>」　<span style="color:#92400E;">保・仮・変・相・合・収・遺・表・判</span>
+  </div>
+  <div class="chant-box">
+    <span class="chant-label">🎤 みんなで声に出して覚えよう！</span>
+    <span class="chant-text">「楽勝！　他の変装が　周囲に評判！」　<span style="font-size:0.78em;opacity:0.85;">（保・仮・変・相・合・収・遺・表・判）</span></span>
+  </div>
+  <p class="page-ref" style="margin-top:4px;">📖 p.112〜113</p>
+</section>
+
+<!-- S18: 登記識別情報とは？ -->
+<section>
+  <h2 class="slide-title">🔐 登記識別情報とは？</h2>
+  <div class="term-note">【登記識別情報】登記名義人（自分の名前で登記している人）を守るためのパスワード</div>
+  <div style="font-size:0.82em;margin:5px 0;">
+    💡 ネットバンキングのパスワードと同じイメージ。誰にも絶対バレてはいけない！
+  </div>
+  <div style="display:flex;gap:8px;margin:5px 0;font-size:0.78em;">
+    <div style="flex:1;background:#eff6ff;border-radius:8px;padding:7px;text-align:center;">
+      <p style="font-weight:bold;color:#1d4ed8;margin:0 0 4px;">① 通知</p>
+      <p style="margin:0;">登記名義人になったとき、登記官からパスワードが通知される</p>
+    </div>
+    <div style="flex:1;background:#fef3c7;border-radius:8px;padding:7px;text-align:center;">
+      <p style="font-weight:bold;color:#92400e;margin:0 0 4px;">② 提供</p>
+      <p style="margin:0;">次の登記申請時に登記所にパスワードを提供しなければならない</p>
+    </div>
+    <div style="flex:1;background:#f0fdf4;border-radius:8px;padding:7px;text-align:center;">
+      <p style="font-weight:bold;color:#166534;margin:0 0 4px;">③ 秘密</p>
+      <p style="margin:0;">絶対に他人に知られてはいけない（秘密厳守）</p>
+    </div>
+  </div>
+  <div class="caution-box" style="font-size:0.79em;margin:4px 0;padding:5px 12px;">
+    ⚠️ 登記識別情報が通知されるのは、登記によって<strong>申請人が登記名義人になる場合</strong>だけ　→ 申請しても登記名義人にならない場合は通知されない
+  </div>
+  <p class="page-ref">📖 p.115〜117</p>
+</section>
+
+<!-- S19: 登記識別情報が提供できない場合 -->
+<section>
+  <h2 class="slide-title">😰 登記識別情報が提供できない場合</h2>
+  <div style="font-size:0.82em;margin:8px 0;">「忘れた」「盗まれたら大変なので通知しないでくれ」という場合も認められている</div>
+  <div style="background:#eff6ff;border-radius:8px;padding:10px;margin:8px 0;font-size:0.8em;">
+    <p style="font-weight:bold;color:#1d4ed8;">対処法①：事前通知</p>
+    <p>登記官 → 登記義務者に「こういう登記申請がありましたが、間違いないですか？」と通知<br>
+    → 登記義務者が「はい、間違いありません」と回答しないと登記できない<br>
+    ⚠️ <strong>所有権</strong>の登記に限り、<strong>前の住所にも</strong>通知が必要</p>
+  </div>
+  <div style="background:#f0fdf4;border-radius:8px;padding:10px;margin:8px 0;font-size:0.8em;">
+    <p style="font-weight:bold;color:#166534;">例外：事前通知が不要になるケース</p>
+    <p>① <strong>司法書士・弁護士</strong>が代理申請して本人確認している場合<br>
+    ② <strong>公証人</strong>が本人と認証した場合<br>
+    ただし！所有権登記の場合、<strong>前の住所への通知は依然として必要</strong></p>
+  </div>
+  <p class="page-ref">📖 p.116</p>
+</section>
+
+<!-- S20: 登記識別情報まとめ表 -->
+<section>
+  <h2 class="slide-title">📊 登記識別情報まとめ表</h2>
+  <table class="ct" style="font-size:0.77em;">
+    <tr><th>場面</th><th>ルール</th></tr>
+    <tr><td>登記名義人になったとき</td><td>登記官から<strong>登記識別情報が通知</strong>される</td></tr>
+    <tr><td>次の登記申請時</td><td>登記識別情報を<strong>提供</strong>しなければならない</td></tr>
+    <tr><td>本人か疑わしいとき</td><td>登記官が<strong>出頭要求・質問</strong>をして調査</td></tr>
+    <tr><td>情報を提供できないとき</td><td><strong>事前通知</strong>（回答がないと登記できない）</td></tr>
+    <tr><td>所有権登記の場合</td><td><strong>前の住所にも</strong>通知必要</td></tr>
+    <tr><td>司法書士・弁護士・公証人がからむと</td><td>事前通知<strong>不要</strong>（所有権の前住所通知は必要）</td></tr>
+  </table>
+  <div style="background:#fef3c7;border-radius:6px;padding:8px;margin-top:8px;font-size:0.77em;">
+    📌 <strong>登記原因証明情報</strong>：権利登記申請時には申請情報と併せて提供が必要<br>
+    例：売買による所有権移転登記申請 → <strong>売買契約書</strong>を提供
+  </div>
+  <p class="page-ref">📖 p.117</p>
+</section>
+
+<!-- S21: 第三者の許可・承諾 -->
+<section>
+  <h2 class="slide-title">🤝 第三者の許可・承諾が必要なケース</h2>
+  <table class="ct" style="font-size:0.75em;">
+    <tr><th>場面</th><th>許可・承諾</th><th>理由</th></tr>
+    <tr style="background:#fee2e2;"><td>売買を原因とする<strong>農地</strong>の所有権移転登記</td><td>✅ <strong>必要</strong><br>農業委員会・知事等の許可</td><td>農地法で許可ないと契約できないから</td></tr>
+    <tr style="background:#dcfce7;"><td><strong>時効取得</strong>を原因とする農地の所有権移転登記</td><td>❌ <strong>不要</strong></td><td>時効は農地法に優先するため</td></tr>
+    <tr style="background:#fee2e2;"><td>抵当権者がいる土地の<strong>所有権登記の抹消</strong></td><td>✅ <strong>必要</strong><br>抵当権者の承諾</td><td>抵当権者が損をするから</td></tr>
+    <tr style="background:#dcfce7;"><td>抵当権設定ある土地の<strong>分筆登記</strong></td><td>❌ <strong>不要</strong></td><td>分筆後も両方の土地に存続するため</td></tr>
+  </table>
+  <div class="caution-box" style="margin-top:10px;font-size:0.82em;">
+    ⚠️ 農地の「売買」と「時効取得」で許可の要否が逆になる！ここは混同しやすい要注意ポイント
+  </div>
+  <p class="page-ref">📖 p.118</p>
+</section>
+
+<!-- S22: 仮登記とは？ -->
+<section>
+  <h2 class="slide-title">🚩 仮登記とは？</h2>
+  <div class="term-note">【仮登記】本登記をするための準備として「ツバをつけておく」登記</div>
+  <div style="display:flex;gap:10px;margin:12px 0;font-size:0.82em;">
+    <div style="flex:1;background:#eff6ff;border-radius:8px;padding:12px;">
+      <p style="font-weight:bold;color:#1d4ed8;">① 物権変動がまだ生じていない（請求権保全）</p>
+      <p style="font-size:0.85em;">例：「宅建試験に合格したら土地を売る」という条件付き売買をした場合</p>
+    </div>
+    <div style="flex:1;background:#fef3c7;border-radius:8px;padding:12px;">
+      <p style="font-weight:bold;color:#92400e;">② 必要な情報が揃っていない</p>
+      <p style="font-size:0.85em;">例：土地を売買したが、登記識別情報を忘れてしまった場合</p>
+    </div>
+  </div>
+  <div class="highlight-box" style="font-size:0.82em;">
+    💡 <strong>仮登記の最大の威力：順位保全効！</strong><br>
+    仮登記を本登記にすると、<strong>本登記の順位 = 仮登記の順位</strong><br>
+    → B が 4/1 に仮登記、C が 5/1 に本登記。B が合格して本登記 → B の順位は 4/1 ！C に優先！
+  </div>
+  <div class="chant-box">
+    <span class="chant-label">🎤 みんなで声に出して覚えよう！</span>
+    <span class="chant-text">「仮は対抗なし！　順位は　仮登記の順位！」</span>
+  </div>
+  <p class="page-ref">📖 p.119</p>
+</section>
+
+<!-- S23: 仮登記の効力と手続 -->
+<section>
+  <h2 class="slide-title">⚡ 仮登記の効力と申請手続</h2>
+  <div class="term-note" style="font-size:0.78em;margin-bottom:8px;">
+    【対抗力】「私の権利だ！」と第三者に主張できる力のこと。<br>
+    対抗力がないと、他の人が先に本登記してしまったら負けてしまう。
+  </div>
+  <div style="display:flex;gap:10px;margin:10px 0;font-size:0.83em;">
+    <div style="flex:1;background:#fee2e2;border:2px solid #ef4444;border-radius:8px;padding:12px;">
+      <p style="font-weight:bold;color:#991b1b;">⚠️ 対抗力はない！</p>
+      <p>仮登記は「仮の」登記なので<strong>対抗力なし</strong><br>対抗力は本登記になってから生じる</p>
+    </div>
+    <div style="flex:1;background:#f0fdf4;border:2px solid #86efac;border-radius:8px;padding:12px;">
+      <p style="font-weight:bold;color:#166534;">✅ 順位保全効はある！</p>
+      <p>本登記にしたとき<br><strong>本登記の順位 = 仮登記の順位</strong>による<br>
+      <span style="font-size:0.85em;color:#166534;">（仮登記した日付がそのまま順位になる）</span></p>
+    </div>
+  </div>
+  <div class="highlight-box" style="font-size:0.8em;margin:8px 0;">
+    📌 仮登記の申請ルール：<br>
+    ① 仮登記義務者の<strong>承諾</strong>がある場合 OR 裁判所の処分がある → 単独で仮登記申請できる<br>
+    ② 仮登記の<strong>抹消</strong>：仮登記名義人が単独で申請できる<br>
+    　また、仮登記名義人の承諾があれば、仮登記上の<strong>利害関係人</strong>も単独で申請できる
+  </div>
+  <div class="caution-box" style="font-size:0.78em;">
+    ⚠️ Bの仮登記を本登記にするとき、Cの登記は<strong>職権で抹消</strong>される<br>
+    → Bが本登記を申請するには損をするCの<strong>承諾</strong>が必要
+  </div>
+  <p class="page-ref">📖 p.120</p>
+</section>
+
+<!-- S24: 比較整理 -->
+<section>
+  <h2 class="slide-title">📊 比較整理：登記の種類と申請方法</h2>
+  <table class="ct" style="font-size:0.68em;">
+    <tr><th>登記の種類</th><th>申請義務</th><th>申請方法</th><th>職権</th></tr>
+    <tr><td>建物の新築・滅失（表示登記）</td><td>✅ 1カ月以内</td><td>単独</td><td>○</td></tr>
+    <tr><td>土地の分筆・合筆（表示登記）</td><td>義務なし</td><td>単独</td><td>○</td></tr>
+    <tr><td>建物の分割・合併（表示登記）</td><td>義務なし</td><td>単独</td><td>❌</td></tr>
+    <tr><td>売買による所有権移転（権利登記）</td><td>❌ なし</td><td>共同（原則）</td><td>❌</td></tr>
+    <tr><td>相続による所有権移転（権利登記）</td><td>✅ 3年以内</td><td>単独（例外）</td><td>❌</td></tr>
+    <tr><td>所有権保存（権利登記）</td><td>義務なし</td><td>単独（例外）</td><td>❌</td></tr>
+    <tr><td>仮登記（義務者の承諾あり）</td><td>義務なし</td><td>単独（例外）</td><td>❌</td></tr>
+  </table>
+  <p class="page-ref" style="margin-top:5px;">📖 p.103〜113</p>
+</section>
+
+<!-- S25: 確認問題①（問題・解答の2枚組） -->
+<section>
+  <!-- 問題ページ -->
+  <section>
+    <h3 style="color:#1e3a5f;">✏️ 確認問題①　〔考えてみよう〕</h3>
+    <div class="exam-q">
+      【問1】不動産登記に関する次の記述のうち、<strong>正しいもの</strong>はどれか。
+    </div>
+    <div class="q-choice">① 土地の地目に変更があったときは、所有者は変更があった日から<strong>6カ月以内</strong>に変更の登記を申請しなければならない。</div>
+    <div class="q-choice">② 賃借権は債権であるため登記事項とはならず、登記記録の権利部に記録することはできない。</div>
+    <div class="q-choice">③ 所有権の登記名義人が住所変更した場合、その変更の登記は<strong>表題部</strong>に対して申請しなければならない。</div>
+    <div class="q-choice">④ 建物が滅失したときは、表題部所有者又は所有権の登記名義人は、その滅失の日から<strong>1カ月以内</strong>に、当該建物の滅失の登記を申請しなければならない。</div>
+    <p class="answer-hint">⬇ スペースキーで解答を表示</p>
+  </section>
+  <!-- 解答ページ -->
+  <section>
+    <h3 style="color:#1e3a5f;">✏️ 確認問題①　〔解答〕</h3>
+    <div class="exam-q">【問1】不動産登記に関する次の記述のうち、正しいものはどれか。</div>
+    <div class="wrong-choice">① 土地の地目に変更があったときは、所有者は変更があった日から<strong>6カ月以内</strong>に…　❌</div>
+    <div class="wrong-choice">② 賃借権は債権であるため登記事項とはならず、権利部に記録することはできない。　❌</div>
+    <div class="wrong-choice">③ 所有権の登記名義人が住所変更した場合、変更の登記は<strong>表題部</strong>に対して…　❌</div>
+    <div class="exam-choice">④ 建物が滅失したときは、その滅失の日から<strong>1カ月以内</strong>に滅失の登記を申請しなければならない。　✅</div>
+    <p style="font-size:0.72em;color:#6B7280;margin-top:8px;">
+      ▶ 解説：<strong>正解④</strong><br>
+      ①誤り：「6カ月以内」ではなく<strong>1カ月以内</strong>。地目・地積等の変更はすべて1カ月が基準（p.102）。<br>
+      ②誤り：賃借権は債権でも<strong>乙区に登記できる</strong>（p.105・R2-14-4）。<br>
+      ③誤り：住所変更は<strong>権利部</strong>で行う。「氏名変更だから表題部では？」は典型的な引っかけ（p.108）。<br>
+      ④正しい：建物の滅失登記の申請義務と1カ月という期限はそのとおり（p.103・R5-14-1）。
+    </p>
+  </section>
+</section>
+
+<!-- S26: 確認問題②（問題・解答の2枚組） -->
+<section>
+  <!-- 問題ページ -->
+  <section>
+    <h3 style="color:#1e3a5f;">✏️ 確認問題②　〔考えてみよう〕</h3>
+    <div class="exam-q">
+      【問2】登記の申請義務・手続に関する次の記述のうち、<strong>正しいもの</strong>はどれか。
+    </div>
+    <div class="q-choice">① AがBに土地を売却した場合、AとBは<strong>必ず</strong>所有権移転登記を申請しなければならない。</div>
+    <div class="q-choice">② 相続により不動産を取得した相続人は、相続により所有権を取得したことを<strong>知った日から3年以内</strong>に相続登記を申請しなければならない。</div>
+    <div class="q-choice">③ 表題部所有者から不動産を購入した者は、<strong>当然に</strong>自己名義で所有権保存登記を申請することができる。</div>
+    <div class="q-choice">④ 登記の申請は、当事者が直接登記所に出頭して<strong>口頭</strong>により行うことができる。</div>
+    <p class="answer-hint">⬇ スペースキーで解答を表示</p>
+  </section>
+  <!-- 解答ページ -->
+  <section>
+    <h3 style="color:#1e3a5f;">✏️ 確認問題②　〔解答〕</h3>
+    <div class="exam-q">【問2】登記の申請義務・手続に関する次の記述のうち、正しいものはどれか。</div>
+    <div class="wrong-choice">① AがBに土地を売却した場合、AとBは<strong>必ず</strong>所有権移転登記を申請しなければならない。　❌</div>
+    <div class="exam-choice">② 相続により不動産を取得した相続人は、所有権を取得したことを<strong>知った日から3年以内</strong>に相続登記を申請しなければならない。　✅</div>
+    <div class="wrong-choice">③ 表題部所有者から不動産を購入した者は、<strong>当然に</strong>自己名義で所有権保存登記を申請することができる。　❌</div>
+    <div class="wrong-choice">④ 登記の申請は、当事者が直接登記所に出頭して<strong>口頭</strong>により行うことができる。　❌</div>
+    <p style="font-size:0.72em;color:#6B7280;margin-top:8px;">
+      ▶ 解説：<strong>正解②</strong><br>
+      ①誤り：「必ず」が誤り。売買等の権利登記は<strong>申請義務がない</strong>（p.106）。「必ず」「常に」は絶対表現の引っかけ。<br>
+      ②正しい：相続登記の義務化は2024年4月施行。<strong>知った日から3年以内</strong>が要件（p.106）。<br>
+      ③誤り：「当然に」が誤り。表題部所有者から購入した者は<strong>原則</strong>直接保存登記できない（p.107）。<br>
+      ④誤り：口頭申請は<strong>例外なく認められない</strong>。これは「常には常に✕のテク」が通じないケース（p.114）。
+    </p>
+  </section>
+</section>
+
+<!-- S27: 確認問題③（問題・解答の2枚組） -->
+<section>
+  <!-- 問題ページ -->
+  <section>
+    <h3 style="color:#1e3a5f;">✏️ 確認問題③　〔考えてみよう〕</h3>
+    <div class="exam-q">
+      【問3】仮登記・登記手続に関する次の記述のうち、<strong>正しいもの</strong>はどれか。
+    </div>
+    <div class="q-choice">① 所有権移転請求権保全のための仮登記がされた後に第三者が本登記を行った場合、仮登記を本登記に改めても、その本登記の順位は第三者の本登記より<strong>後に</strong>なる。</div>
+    <div class="q-choice">② 仮登記は、<strong>常に</strong>仮登記権利者が単独で申請することができる。</div>
+    <div class="q-choice">③ 登記事項証明書の交付請求は、<strong>利害関係を有することを明らか</strong>にしてからでないと、することができない。</div>
+    <div class="q-choice">④ 登記の申請をする者の代理人の代理権は、本人の死亡によっても消滅しない。</div>
+    <p class="answer-hint">⬇ スペースキーで解答を表示</p>
+  </section>
+  <!-- 解答ページ -->
+  <section>
+    <h3 style="color:#1e3a5f;">✏️ 確認問題③　〔解答〕</h3>
+    <div class="exam-q">【問3】仮登記・登記手続に関する次の記述のうち、正しいものはどれか。</div>
+    <div class="wrong-choice">① 仮登記を本登記に改めても、その本登記の順位は第三者の本登記より<strong>後に</strong>なる。　❌</div>
+    <div class="wrong-choice">② 仮登記は、<strong>常に</strong>仮登記権利者が単独で申請することができる。　❌</div>
+    <div class="wrong-choice">③ 登記事項証明書の交付請求は、<strong>利害関係を有することを明らか</strong>にしてからでないと、することができない。　❌</div>
+    <div class="exam-choice">④ 登記の申請をする者の代理人の代理権は、本人の死亡によっても消滅しない。　✅</div>
+    <p style="font-size:0.72em;color:#6B7280;margin-top:8px;">
+      ▶ 解説：<strong>正解④</strong><br>
+      ①誤り：本登記の順位は<strong>仮登記の順位による</strong>（後にはならず、第三者より優先する）。これが仮登記の「順位保全効力」（p.119）。<br>
+      ②誤り：「常に」が誤り。仮登記の単独申請は<strong>義務者の承諾または裁判所の処分がある場合のみ</strong>（p.120・H26-14-4）。<br>
+      ③誤り：登記事項証明書は<strong>利害関係なしでも誰でも</strong>取れる（p.109・H27-14-1）。<br>
+      ④正しい：登記申請の代理権は通常の委任と異なり、本人死亡でも消滅しない（p.114・R3-14-2）。
+    </p>
+  </section>
+</section>
+
+<!-- S28: まとめ -->
+<section>
+  <h2 class="slide-title">📝 今日のまとめ ─ 必ず覚える5点</h2>
+  <div style="text-align:left;font-size:0.83em;">
+    <div style="background:#eff6ff;border-radius:6px;padding:6px 10px;margin:4px 0;">
+      <strong>① 登記記録の構造</strong>：表題部（物理的状況）＋権利部（甲区＝所有権、乙区＝その他）
+    </div>
+    <div style="background:#f0fdf4;border-radius:6px;padding:6px 10px;margin:4px 0;">
+      <strong>② 申請義務</strong>：表示登記は<strong>1カ月以内</strong>。相続登記は<strong>3年以内</strong>。売買等の権利登記は<strong>義務なし！</strong>
+    </div>
+    <div style="background:#fef3c7;border-radius:6px;padding:6px 10px;margin:4px 0;">
+      <strong>③ 共同申請の原則</strong>：権利登記は登記権利者と登記義務者が共同して申請。例外9選「楽勝・他の変装が周囲に評判」
+    </div>
+    <div style="background:#fce7f3;border-radius:6px;padding:6px 10px;margin:4px 0;">
+      <strong>④ 登記識別情報</strong>：登記名義人のパスワード。提供できない場合は事前通知（所有権は前住所にも通知）
+    </div>
+    <div style="background:#fff7ed;border-radius:6px;padding:6px 10px;margin:4px 0;">
+      <strong>⑤ 仮登記</strong>：対抗力はないが<strong>順位保全効</strong>あり。本登記の順位＝仮登記の順位
+    </div>
+  </div>
+  <div class="chant-box" style="margin-top:6px;">
+    <span class="chant-label">🎤 全部まとめて声に出して覚えよう！</span>
+    <span class="chant-text">
+      「建物生まれ死ぬ時　一カ月！」　「権利は自由！　相続だけは三年！」<br>
+      「楽勝！他の変装が周囲に評判！」　「仮は対抗なし！　順位は仮登記の順位！」
+    </span>
+  </div>
+  <p class="page-ref" style="margin-top:4px;">📖 p.101〜120</p>
+</section>
+
+<!-- S29: 次回予告 -->
+<section data-background-gradient="linear-gradient(135deg,#2d6a4f 0%,#1e3a5f 100%)">
+  <div style="color:white;">
+    <h2 style="color:#fbbf24;">次回予告 🎯</h2>
+    <div style="background:rgba(255,255,255,0.15);border-radius:10px;padding:20px;margin:15px 0;">
+      <p style="font-size:1.1em;font-weight:bold;color:#6ee7b7;">第10回：区分所有法</p>
+      <p style="font-size:0.85em;margin-top:8px;">マンション（区分所有建物）に関するルール</p>
+      <ul style="font-size:0.8em;text-align:left;margin-top:8px;line-height:1.8em;">
+        <li>専有部分と共用部分の違い</li>
+        <li>管理組合と集会のルール</li>
+        <li>規約の変更・建替え決議</li>
+      </ul>
+    </div>
+    <p style="font-size:0.7em;opacity:0.8;margin-top:15px;">お疲れ様でした！今日の内容を復習して次回に備えましょう 💪</p>
+  </div>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/highlight.js"></script>
+<script>
+Reveal.initialize({
+  hash:true,
+  slideNumber:'c/t',
+  transition:'slide',
+  transitionSpeed:'fast',
+  width:1200,
+  height:700,
+  plugins:[ RevealHighlight ]
+});
+</script>
+</body>
+</html>

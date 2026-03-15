@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宅建勉強会 第8回 物権の変動・危険負担・債権譲渡</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reset.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/white.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/monokai.css">
+<style>
+  :root {
+    --newera-green: #16a34a;
+    --newera-dark: #1e3a5f;
+    --amber: #F59E0B;
+    --amber-dark: #92400E;
+  }
+  .reveal .slides section {
+    font-size: 0.85em;
+  }
+  .reveal h1 { color: var(--newera-dark); font-size: 1.6em; }
+  .reveal h2 { color: var(--newera-dark); font-size: 1.3em; border-bottom: 3px solid var(--newera-green); padding-bottom: 6px; }
+  .reveal h3 { color: var(--newera-green); font-size: 1.1em; }
+
+  .term-note {
+    background:#FFF7ED; border-left:4px solid #F59E0B;
+    padding:8px 14px; margin:6px 0; font-size:0.78em;
+    color:#92400E; border-radius:0 6px 6px 0;
+  }
+  .page-ref {
+    font-size:0.72em; color:#9CA3AF; font-style:italic;
+    background:#F9FAFB; padding:2px 8px; border-radius:4px;
+    border:1px solid #E5E7EB;
+  }
+  .exam-q {
+    background:#FEF3C7; border:2px solid #F59E0B;
+    border-radius:8px; padding:12px 16px; margin:8px 0;
+    font-weight:bold; color:#92400E;
+  }
+  .exam-choice {
+    background:#F0FDF4; border:1px solid #86EFAC;
+    border-radius:6px; padding:8px 12px; margin:4px 0;
+    font-size:0.85em; color:#166534;
+  }
+  .wrong-choice {
+    background:#FEF2F2; border:1px solid #FCA5A5;
+    border-radius:6px; padding:8px 12px; margin:4px 0;
+    font-size:0.85em; color:#991B1B;
+  }
+  .highlight-box {
+    background:linear-gradient(135deg,#667eea20,#764ba220);
+    border:2px solid #667eea; border-radius:10px;
+    padding:12px 20px; margin:8px 0;
+  }
+  .caution-box {
+    background:#FFF7ED; border:2px solid #F59E0B;
+    border-radius:8px; padding:10px 16px; margin:8px 0;
+    font-size:0.85em;
+  }
+  .law-box {
+    background: #EFF6FF; border: 2px solid #3B82F6;
+    border-radius: 8px; padding: 10px 16px; margin: 8px 0;
+    font-size: 0.82em; color: #1e3a8a;
+  }
+  .key-box {
+    background: #F0FDF4; border: 2px solid #16a34a;
+    border-radius: 8px; padding: 10px 16px; margin: 8px 0;
+    font-size: 0.85em; color: #14532d;
+  }
+  .compare-table {
+    width: 100%; border-collapse: collapse; font-size: 0.78em; margin: 6px 0;
+  }
+  .compare-table th {
+    background: #1e3a5f; color: white; padding: 6px 10px; text-align: center;
+  }
+  .compare-table td {
+    border: 1px solid #d1d5db; padding: 6px 10px; text-align: center;
+  }
+  .compare-table tr:nth-child(even) td { background: #f9fafb; }
+  .circle { color: #16a34a; font-weight: bold; font-size: 1.1em; }
+  .cross  { color: #dc2626; font-weight: bold; font-size: 1.1em; }
+  .step-arrow {
+    display: flex; align-items: center; gap: 8px;
+    margin: 8px 0; font-size: 0.85em;
+  }
+  .step-box {
+    background: #e0f2fe; border: 1px solid #0284c7;
+    border-radius: 6px; padding: 6px 12px; white-space: nowrap;
+    font-size: 0.8em; color: #0c4a6e;
+  }
+  .arrow-right { font-size: 1.3em; color: #9ca3af; }
+  .badge-red    { display:inline-block; background:#dc2626; color:white; border-radius:4px; padding:1px 7px; font-size:0.75em; font-weight:bold; margin:0 3px; }
+  .badge-green  { display:inline-block; background:#16a34a; color:white; border-radius:4px; padding:1px 7px; font-size:0.75em; font-weight:bold; margin:0 3px; }
+  .badge-blue   { display:inline-block; background:#1d4ed8; color:white; border-radius:4px; padding:1px 7px; font-size:0.75em; font-weight:bold; margin:0 3px; }
+  .badge-amber  { display:inline-block; background:#d97706; color:white; border-radius:4px; padding:1px 7px; font-size:0.75em; font-weight:bold; margin:0 3px; }
+  .motto {
+    font-size:1.4em; font-weight:bold; color:#dc2626;
+    text-align:center; padding:12px; background:#fef2f2;
+    border:3px solid #dc2626; border-radius:8px; margin:10px 0;
+  }
+  ul { text-align:left; padding-left:20px; }
+  ul li { margin-bottom:5px; }
+  .two-col { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .three-col { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
+  .slide-footer { font-size:0.65em; color:#9ca3af; margin-top:10px; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ===== S1: 表紙 ===== -->
+<section data-background="linear-gradient(135deg, #1e3a5f 0%, #16a34a 100%)">
+  <h1 style="color:white; font-size:1.6em; margin-bottom:10px;">🏠 株式会社 NEW ERA</h1>
+  <h2 style="color:#fbbf24; border:none; font-size:1.2em;">宅建試験 勉強会 第8回</h2>
+  <div style="background:rgba(255,255,255,0.15); border-radius:12px; padding:20px 30px; margin:20px auto; max-width:700px;">
+    <p style="color:white; font-size:1.3em; font-weight:bold; margin:0;">
+      第5章 物権の変動・<br>危険負担・債権譲渡
+    </p>
+  </div>
+  <p style="color:#d1fae5; font-size:0.85em; margin-top:10px;">
+    📅 2026年3月12日（木）9:00〜9:50<br>
+    <span class="page-ref" style="color:#a7f3d0; background:transparent; border-color:rgba(255,255,255,0.3);">📖 テキスト p.87〜100</span>
+  </p>
+</section>
+
+<!-- ===== S2: アジェンダ ===== -->
+<section>
+  <h2>今日のゴールと学習範囲</h2>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:10px;">
+    <div>
+      <div class="key-box" style="margin-bottom:8px;">
+        <strong>🎯 今日のゴール</strong><br>
+        <ul style="margin:6px 0; font-size:0.9em;">
+          <li>不動産売買は「口約束だけ」で成立することを理解する</li>
+          <li>登記がなぜ重要か（対抗要件）を実感する</li>
+          <li>債権譲渡の通知ルールを覚える</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="law-box">
+        <strong>📋 今日の内容（4テーマ）</strong><br>
+        <ol style="margin:6px 0; font-size:0.9em;">
+          <li>物権の変動（意思表示だけで成立）</li>
+          <li>危険負担（引渡し前に物が滅失）</li>
+          <li>物権変動の対抗要件（登記の力）</li>
+          <li>債権譲渡（権利を他人に渡す）</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <p class="page-ref" style="text-align:center;">📖 テキスト p.87〜100 ／ 所要時間：50分</p>
+</section>
+
+<!-- ===== S3: 導入クイズ ===== -->
+<section>
+  <h2>🤔 導入クイズ：直感で答えてみよう！</h2>
+  <div class="exam-q" style="font-size:1em; margin:10px 0;">
+    Q. Aさんの家をBさんが1億円で買うとき、<br>
+    「いいですよ、買います」という口約束だけで<br>
+    売買契約は成立する？
+  </div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px;">
+    <div style="background:#dbeafe; border:2px solid #3b82f6; border-radius:8px; padding:12px; text-align:center;">
+      <div style="font-size:1.5em;">🙆</div>
+      <strong>A. 成立する</strong><br>
+      <small>口約束だけでOK</small>
+    </div>
+    <div style="background:#fee2e2; border:2px solid #ef4444; border-radius:8px; padding:12px; text-align:center;">
+      <div style="font-size:1.5em;">🙅</div>
+      <strong>B. 成立しない</strong><br>
+      <small>契約書が必要</small>
+    </div>
+  </div>
+  <div class="caution-box" style="margin-top:12px; text-align:center;">
+    ⬇️ 正解は次のスライドで！<br>
+    <small>「え、そんな大きな額の取引が口約束で？」と思った人ほど要注意！</small>
+  </div>
+</section>
+
+<!-- ===== S4: 物権の変動 ① 意思表示だけでOK ===== -->
+<section>
+  <h2>1. 物権の変動：意思表示だけで成立！</h2>
+  <div class="law-box">
+    <strong>📜 民法第176条・第522条</strong><br>
+    契約の成立 ＆ 物権の変動（所有権の移転）は、<br>
+    当事者の<strong>意思表示（口約束）さえあればよい</strong>
+  </div>
+  <div class="key-box" style="margin-top:10px;">
+    ✅ 以下は一切不要！<br>
+    <div class="three-col" style="margin-top:8px; font-size:0.82em;">
+      <div style="background:white; border-radius:6px; padding:8px; text-align:center;">📝 契約書<br>の作成</div>
+      <div style="background:white; border-radius:6px; padding:8px; text-align:center;">📋 登記<br>の移転</div>
+      <div style="background:white; border-radius:6px; padding:8px; text-align:center;">🏠 物件<br>の引渡し</div>
+    </div>
+    <div class="three-col" style="margin-top:6px; font-size:0.82em;">
+      <div style="background:white; border-radius:6px; padding:8px; text-align:center;">💰 代金<br>の支払い</div>
+      <div style="background:white; border-radius:6px; padding:8px; text-align:center;">📞 電話<br>でもOK</div>
+      <div style="background:white; border-radius:6px; padding:8px; text-align:center;">✉️ 手紙<br>でもOK</div>
+    </div>
+  </div>
+  <div class="caution-box" style="margin-top:8px;">
+    ⚠️ <strong>例外：質権は「引渡し」が必要</strong><br>
+    <small>質屋に物を預けて金を借りる場合、口約束だけでは質権は成立しない（要物契約）</small>
+  </div>
+  <p class="page-ref">📖 p.87〜88</p>
+</section>
+
+<!-- ===== S5: 物権 vs 債権 ===== -->
+<section>
+  <h2>物権と債権 — 2つの権利の違い</h2>
+  <div class="term-note">【物権】物を直接・排他的に支配する権利。種類は法律で限定される（物権法定主義）</div>
+  <div class="term-note">【債権】特定の人に「何かをしてもらう」権利。自由に作れる（契約自由の原則）</div>
+  <table class="compare-table" style="margin-top:10px;">
+    <tr>
+      <th>比較</th>
+      <th>物権</th>
+      <th>債権</th>
+    </tr>
+    <tr>
+      <td>誰に主張できる？</td>
+      <td>誰にでも主張できる（絶対性）</td>
+      <td>相手方だけ（相対性）</td>
+    </tr>
+    <tr>
+      <td>種類の制限</td>
+      <td>法律で定めたものだけ</td>
+      <td>自由に作れる</td>
+    </tr>
+    <tr>
+      <td>代表例</td>
+      <td>所有権・地上権・抵当権</td>
+      <td>賃借権・貸金返還請求権</td>
+    </tr>
+  </table>
+  <div class="caution-box" style="margin-top:8px;">
+    ⚠️ <strong>試験の罠！</strong> 賃借権は「債権」。地上権は「物権」。この違いが次の比較表で超重要！
+  </div>
+  <p class="page-ref">📖 p.88〜89</p>
+</section>
+
+<!-- ===== S6: 地上権 vs 賃借権 ===== -->
+<section>
+  <h2>地上権 vs 賃借権 — 試験頻出の比較表</h2>
+  <div class="term-note">【地上権】他人の土地を使って建物を建てる「物権」。強い権利</div>
+  <div class="term-note">【賃借権】他人の土地を借りて使う「債権」。弱い権利</div>
+  <table class="compare-table" style="margin-top:12px;">
+    <tr>
+      <th>できること</th>
+      <th>地上権</th>
+      <th>賃借権</th>
+    </tr>
+    <tr>
+      <td>① 抵当権を設定できるか？</td>
+      <td class="circle">○ できる</td>
+      <td class="cross">✕ できない</td>
+    </tr>
+    <tr>
+      <td>② 地主の承諾なしに譲渡できるか？</td>
+      <td class="circle">○ できる</td>
+      <td class="cross">✕ できない</td>
+    </tr>
+    <tr>
+      <td>③ 登記できるか？</td>
+      <td class="circle">○ できる</td>
+      <td class="circle">○ できる</td>
+    </tr>
+  </table>
+  <div class="caution-box" style="margin-top:10px;">
+    ⚠️ <strong>暗記ポイント：</strong>地上権は物権なので「自由度が高い」。<br>賃借権は債権なので「地主の関与が必要」とイメージ！
+  </div>
+  <p class="page-ref">📖 p.88〜89</p>
+</section>
+
+<!-- ===== S7: 他人物売買 ===== -->
+<section>
+  <h2>他人の物を売ることは？ → 有効！</h2>
+  <div class="key-box" style="font-size:0.95em;">
+    <strong>他人物売買は有効に成立する</strong><br>
+    「自分が持っていない物を売る」契約も法律上は有効！
+  </div>
+  <div style="margin: 12px 0; font-size:0.85em;">
+    <div class="step-arrow">
+      <div class="step-box">Aが<strong>Cの土地</strong>をBに売る（A→B売買契約）</div>
+      <span class="arrow-right">→</span>
+      <div class="step-box">契約は<strong>有効に成立</strong></div>
+    </div>
+    <div class="step-arrow">
+      <div class="step-box" style="flex:1;">AはCから土地を取得してBへ移転する義務を負う</div>
+    </div>
+    <div class="term-note">【権利取得移転義務】他人の物を売った人（A）が、その物を正当に取得してから買主（B）に引き渡す義務</div>
+    <div class="step-arrow">
+      <div class="step-box">Aがこの義務を果たせなかった場合</div>
+      <span class="arrow-right">→</span>
+      <div class="step-box">Bは①<strong>損害賠償</strong>請求 or ②<strong>契約解除</strong>できる</div>
+    </div>
+  </div>
+  <div class="caution-box">
+    ⚠️ 不動産業界での実務でも「仕入れ確約なし」で売買する前提の契約は存在する。<br>
+    ただし宅建業法上は別途制限あり（次回以降で学習）
+  </div>
+  <p class="page-ref">📖 p.89〜90</p>
+</section>
+
+<!-- ===== S8: 危険負担 ===== -->
+<section>
+  <h2>2. 危険負担 — 物が燃えたらどうなる？</h2>
+  <div class="law-box">
+    <strong>📜 民法第536条</strong><br>
+    売買目的物が引渡し前に<strong>不可抗力</strong>で滅失した場合
+    → <strong>買主は代金の支払いを拒むことができる</strong>
+  </div>
+  <div style="margin:12px 0;">
+    <div class="step-arrow" style="justify-content:center;">
+      <div class="step-box">AがBに家を1億円で売却（契約成立）</div>
+      <span class="arrow-right">→</span>
+      <div class="step-box" style="background:#fef2f2; border-color:#dc2626;">落雷で全焼！<br>（引渡し前）</div>
+      <span class="arrow-right">→</span>
+      <div class="step-box" style="background:#f0fdf4; border-color:#16a34a;">BはAへの<br>代金支払いを<br><strong>拒否できる</strong></div>
+    </div>
+  </div>
+  <div class="term-note">【危険負担】誰も悪くない（不可抗力）のに物が滅失した場合、その「損失を誰が負担するか」という問題</div>
+  <div class="key-box">
+    → 危険は<strong>売主（A）の側</strong>で負担！<br>
+    買主Bは「代金拒否」も「契約解除」も選べる
+  </div>
+  <div class="caution-box">
+    ⚠️ キーワード3点セット：「<strong>引渡し前</strong>」「<strong>不可抗力</strong>」「<strong>滅失</strong>」<br>
+    引渡し「後」の滅失は別の話。「引渡し前」がポイント！
+  </div>
+  <p class="page-ref">📖 p.90</p>
+</section>
+
+<!-- ===== S9: 対抗要件とは ===== -->
+<section>
+  <h2>3. 物権変動の対抗要件 — 「登記」の力</h2>
+  <div class="term-note">【対抗要件】自分の権利を第三者に「俺のものだ！」と主張するために必要な条件</div>
+  <div class="law-box" style="margin-top:10px;">
+    <strong>📜 民法第177条：不動産の対抗要件 = 登記</strong><br>
+    不動産物権変動（例：土地の所有権取得）は、<strong>登記がないと第三者に対抗できない</strong>
+  </div>
+  <div style="margin:12px 0; font-size:0.9em;">
+    <div style="background:#fef9c3; border-radius:8px; padding:10px; text-align:center;">
+      🏠 意思表示で所有権は移転する<br>
+      <span style="font-size:1.5em;">↓</span><br>
+      <strong>でも第三者への主張には「登記」が必要！</strong>
+    </div>
+  </div>
+  <div class="caution-box">
+    ⚠️ <strong>混乱しやすいポイント：</strong><br>
+    「意思表示で所有権は移転した（当事者間はOK）」けど<br>
+    「登記がないと第三者に"俺の土地だ"と言えない」<br>
+    → 2段階で考える！
+  </div>
+  <p class="page-ref">📖 p.91</p>
+</section>
+
+<!-- ===== S10: 二重譲渡 ===== -->
+<section>
+  <h2>二重譲渡 — 同じ土地を2人に売ったら？</h2>
+  <div style="font-size:0.85em;">
+    <div class="highlight-box" style="margin-bottom:10px;">
+      <strong>具体例：</strong>Aが自分の土地を<br>
+      　4月1日 → Bに売却（AB間売買成立✅）<br>
+      　4月2日 → Cにも売却（AC間売買も成立✅）<br>
+      <em style="color:#6b7280;">法律上、両方とも有効な契約！</em>
+    </div>
+  </div>
+  <div class="key-box" style="font-size:0.9em; text-align:center;">
+    <strong>🏆 BとCどちらが勝つ？</strong><br>
+    →　<strong style="font-size:1.3em; color:#dc2626;">先に登記を得た方が勝つ！</strong><br>
+    （先に買ったか後に買ったかは関係ない）
+  </div>
+  <div class="caution-box" style="margin-top:10px;">
+    ⚠️ <strong>試験の罠：</strong>「Cは悪意（Bが先に買ったことを知っていた）でもいい」<br>
+    → 悪意でも登記を得れば勝てる（背信的悪意者は別）
+  </div>
+  <p class="page-ref">📖 p.91〜92</p>
+</section>
+
+<!-- ===== S11: 解除・取消後の第三者 (1/2) ===== -->
+<section>
+  <h2>解除・取消後の第三者（前半）</h2>
+  <div class="caution-box" style="font-size:0.82em; margin-bottom:8px;">
+    ⚠️ <strong>考え方のコツ：</strong>取消・解除という「事件」より<span class="badge-blue">前</span>か<span class="badge-red">後</span>かで答えが変わる！<br>
+    「後」はほぼ全部「登記を得た方の勝ち」と覚えよう
+  </div>
+  <table class="compare-table" style="margin-top:8px; font-size:0.82em;">
+    <tr>
+      <th>対立する組み合わせ</th>
+      <th>どっちが勝つ？</th>
+    </tr>
+    <tr>
+      <td>解除者 vs 解除<span class="badge-blue">前</span>の転得者</td>
+      <td><strong>登記を得た方</strong></td>
+    </tr>
+    <tr>
+      <td>解除者 vs 解除<span class="badge-red">後</span>の転得者</td>
+      <td><strong>登記を得た方</strong></td>
+    </tr>
+    <tr>
+      <td>制限行為能力者 vs 取消<span class="badge-blue">前</span>の転得者</td>
+      <td><strong>制限行為能力者が勝つ</strong><br><small>（たとえ転得者が善意無過失＋登記を得ていても！）</small></td>
+    </tr>
+    <tr>
+      <td>制限行為能力者 vs 取消<span class="badge-red">後</span>の転得者</td>
+      <td><strong>登記を得た方</strong></td>
+    </tr>
+  </table>
+  <div class="key-box" style="margin-top:8px; font-size:0.85em;">
+    📌 制限行為能力者は「取消前」なら絶対勝てる！（保護が厚い）
+  </div>
+  <p class="page-ref">📖 p.94</p>
+</section>
+
+<!-- ===== S11b: 解除・取消後の第三者 (2/2) ===== -->
+<section>
+  <h2>解除・取消後の第三者（後半）＋ 時効</h2>
+  <table class="compare-table" style="margin-top:8px; font-size:0.82em;">
+    <tr>
+      <th>対立する組み合わせ</th>
+      <th>どっちが勝つ？</th>
+    </tr>
+    <tr>
+      <td>強迫被害者 vs 取消<span class="badge-blue">前</span>の転得者</td>
+      <td><strong>強迫被害者（登記なくても）</strong></td>
+    </tr>
+    <tr>
+      <td>強迫被害者 vs 取消<span class="badge-red">後</span>の転得者</td>
+      <td><strong>登記を得た方</strong></td>
+    </tr>
+    <tr>
+      <td>時効取得者 vs 時効完成<span class="badge-blue">前</span>の譲受人</td>
+      <td><strong>時効取得者（登記なくても）</strong></td>
+    </tr>
+    <tr>
+      <td>時効取得者 vs 時効完成<span class="badge-red">後</span>の譲受人</td>
+      <td><strong>登記を得た方</strong></td>
+    </tr>
+  </table>
+  <div class="motto" style="margin-top:12px;">🔑 「後」はすべて登記で決まる！</div>
+  <div class="caution-box" style="margin-top:8px; font-size:0.82em;">
+    ⚠️ 強迫は被害者を最大限保護 → 取消前なら相手がどんな人（善意でも）でも被害者の勝ち<br>
+    詐欺・錯誤は善意無過失の第三者を保護（次スライド参照）
+  </div>
+  <p class="page-ref">📖 p.94</p>
+</section>
+
+<!-- ===== S12: 詐欺・錯誤の第三者 ===== -->
+<section>
+  <h2>詐欺・錯誤の場合の第三者</h2>
+  <div class="caution-box">
+    ⚠️ 詐欺と錯誤は「強迫」と違い、取消<span class="badge-blue">前</span>の転得者の「善意・悪意」で結果が変わる！
+  </div>
+  <table class="compare-table" style="margin-top:10px; font-size:0.82em;">
+    <tr>
+      <th>場面</th>
+      <th>転得者が善意無過失</th>
+      <th>転得者が悪意 or 過失あり</th>
+    </tr>
+    <tr>
+      <td>詐欺被害者 vs 取消<span class="badge-blue">前</span>の転得者</td>
+      <td class="circle">転得者の勝ち<br>（登記なしでも）</td>
+      <td class="cross">詐欺被害者の勝ち<br>（登記なしでも）</td>
+    </tr>
+    <tr>
+      <td>錯誤者 vs 取消<span class="badge-blue">前</span>の転得者</td>
+      <td class="circle">転得者の勝ち<br>（登記なしでも）</td>
+      <td class="cross">錯誤者の勝ち<br>（登記なしでも）</td>
+    </tr>
+  </table>
+  <div class="key-box" style="margin-top:10px;">
+    📊 <strong>整理のコツ：</strong><br>
+    強迫 → 被害者が完全勝利（取消前は絶対）<br>
+    詐欺・錯誤 → 善意無過失の第三者は保護される
+  </div>
+  <p class="page-ref">📖 p.94</p>
+</section>
+
+<!-- ===== S13: 極悪な第三者 ===== -->
+<section>
+  <h2>「極悪」な第三者には登記なしでも対抗できる！</h2>
+  <div class="term-note">【極悪な第三者】社会的に許されない手段で権利を取得しようとした者。登記を得ていても保護されない</div>
+  <div style="margin:10px 0; font-size:0.82em;">
+    <div class="two-col">
+      <div>
+        <div class="wrong-choice">① 🏚️ 不法占拠者Z<br><small>勝手に家を建てて住みついている</small></div>
+        <div class="wrong-choice">② 🔥 不法行為者Z<br><small>Aの家に放火した</small></div>
+        <div class="wrong-choice">③ 🚫 無権利者Z<br><small>虚偽表示・無権限で取得した</small></div>
+      </div>
+      <div>
+        <div class="wrong-choice">④ 😈 背信的悪意者Z<br><small>Bを困らせる目的だけで購入（いやがらせ）</small></div>
+        <div class="wrong-choice">⑤ 🤝 登記申請の依頼を受けていた者Z<br><small>BのためにAに依頼されていたのに裏切った</small></div>
+        <div class="wrong-choice">⑥ 🦹 詐欺・強迫により登記を妨げた者Z<br><small>Bの登記を妨害して自分が先に登記</small></div>
+      </div>
+    </div>
+  </div>
+  <div class="key-box" style="text-align:center;">
+    これら6つは<strong>「極悪」なZへは登記なしでも対抗OK</strong><br>
+    "極悪"イメージで覚える！暗記しなくていい
+  </div>
+  <p class="page-ref">📖 p.95〜96</p>
+</section>
+
+<!-- ===== S14: 公信力 ===== -->
+<section>
+  <h2>公信力 — 登記を信じると損をする？</h2>
+  <div class="term-note">【公信力】登記の内容を信じて取引した人を保護する力 → 日本の登記には<strong style="color:#dc2626;">公信力がない</strong>！</div>
+  <div style="margin:10px 0; font-size:0.85em;">
+    <div class="step-arrow" style="flex-wrap:wrap; gap:6px;">
+      <div class="step-box" style="background:#fef2f2;">ドラ息子Bが父親A名義の土地を<br>勝手にB名義に登記移転</div>
+      <span class="arrow-right">→</span>
+      <div class="step-box">Cが「登記があるから大丈夫」と<br>Bから土地を購入</div>
+      <span class="arrow-right">→</span>
+      <div class="step-box" style="background:#fef2f2;">Cは土地を<br><strong>取得できない！</strong></div>
+    </div>
+  </div>
+  <div class="caution-box">
+    ⚠️ <strong>日本の登記には公信力がない</strong><br>
+    = 「登記名義人から買えば必ず権利を取得できる」わけではない！<br>
+    <small>（AとBが共謀して虚偽登記した場合などは例外扱い）</small>
+  </div>
+  <div class="key-box" style="margin-top:8px;">
+    📊 比較：<strong>動産</strong>には「公信力あり」（引渡し = 対抗要件 + 公信力）<br>
+    不動産の対抗要件：<strong>登記</strong>（公信力なし）<br>
+    動産の対抗要件：<strong>引渡し</strong>（公信力あり）
+  </div>
+  <p class="page-ref">📖 p.96〜97</p>
+</section>
+
+<!-- ===== S15: 動産の対抗要件 ===== -->
+<section>
+  <h2>動産の対抗要件 = 引渡し</h2>
+  <table class="compare-table" style="margin-top:10px;">
+    <tr>
+      <th>種類</th>
+      <th>対抗要件</th>
+      <th>公信力</th>
+    </tr>
+    <tr>
+      <td><strong>不動産</strong>（土地・建物）</td>
+      <td><strong>登記</strong></td>
+      <td class="cross">なし</td>
+    </tr>
+    <tr>
+      <td><strong>動産</strong>（時計・車等）</td>
+      <td><strong>引渡し</strong></td>
+      <td class="circle">あり</td>
+    </tr>
+  </table>
+  <div class="key-box" style="margin-top:12px; font-size:0.9em;">
+    🎯 <strong>試験では不動産登記の問題が圧倒的に多い</strong><br>
+    動産は「引渡し」とだけ覚えておけばOK
+  </div>
+  <div class="caution-box" style="margin-top:8px;">
+    ⚠️ <strong>実務でもよく使う知識：</strong><br>
+    中古物件売買で登記が遅れた場合のリスクはここから来ている！
+  </div>
+  <p class="page-ref">📖 p.97</p>
+</section>
+
+<!-- ===== S16: 債権譲渡とは ===== -->
+<section>
+  <h2>4. 債権譲渡 — 「もらえる権利」を売る</h2>
+  <div class="term-note">【債権譲渡】AがBに対して持つ「お金を返してもらう権利（債権）」を、第三者Cに譲り渡すこと</div>
+  <div style="margin:12px 0; font-size:0.85em;">
+    <div class="step-arrow" style="justify-content:center; font-size:1.1em;">
+      <div class="step-box" style="background:#dbeafe;">A（債権者・譲渡人）<br>BにBに100万円の<br>貸金債権を持っている</div>
+      <span class="arrow-right">─📄─→</span>
+      <div class="step-box" style="background:#f0fdf4;">C（譲受人）<br>Aから債権を譲受け<br>「Bから100万円もらえる権利」をゲット</div>
+    </div>
+    <div style="text-align:center; margin-top:8px; font-size:0.9em; color:#6b7280;">
+      ↕️ 債務者B（100万円を返す義務のある人）
+    </div>
+  </div>
+  <div class="law-box" style="margin-top:8px;">
+    <strong>📜 民法第467条：</strong><br>
+    ① 譲渡制限特約があっても、有効に譲渡できる<br>
+    　ただし：譲受人が<strong>悪意・重過失</strong>なら、債務者は履行を<strong>拒否可</strong>
+  </div>
+  <p class="page-ref">📖 p.98</p>
+</section>
+
+<!-- ===== S17: 債権譲渡の対抗要件 ===== -->
+<section>
+  <h2>債権譲渡の対抗要件 — 3つの方法</h2>
+  <div class="caution-box" style="margin-bottom:10px;">
+    ⚠️ <strong>問題：</strong>CがBに「Aから権利を譲り受けた。100万円払え！」と言っても<br>
+    Bは「知らない、証明してくれ」と言える。どうやって証明する？
+  </div>
+  <div class="key-box" style="font-size:0.9em; margin-bottom:10px;">
+    <strong>✅ 3つのうちどれか1つあればOK（すべて口頭でもいい）</strong>
+  </div>
+  <div style="font-size:0.88em;">
+    <div class="exam-choice">① 【譲渡人A → 債務者B への通知】<br><small>AがBに「Cに譲渡しました」と伝える（口頭・電話・郵便OK）</small></div>
+    <div class="exam-choice">② 【債務者B → 譲渡人A への承諾】<br><small>Bが「分かりました」とAに伝える</small></div>
+    <div class="exam-choice">③ 【債務者B → 譲受人C への承諾】<br><small>Bが「分かりました」とCに伝える</small></div>
+  </div>
+  <div class="caution-box" style="margin-top:8px;">
+    ⚠️ <strong>通知の方向に注意！</strong>「AからBへの通知」のみ。「BからAへの通知」は含まれない
+  </div>
+  <p class="page-ref">📖 p.98〜99</p>
+</section>
+
+<!-- ===== S18: 債権の二重譲渡 ===== -->
+<section>
+  <h2>債権の二重譲渡 — どちらが優先する？</h2>
+  <div style="font-size:0.85em; margin-bottom:10px;">
+    <div class="highlight-box">
+      Aが同じ債権（100万円）をCとDの両方に譲渡した場合、<br>
+      どちらがBに「俺が本当の譲受人だ」と主張できるか？
+    </div>
+  </div>
+  <div class="key-box" style="margin:10px 0; font-size:0.9em;">
+    <strong>🏆 決め手：「確定日付のある証書」で行われた通知・承諾の先後</strong>
+  </div>
+  <div class="term-note">【確定日付のある証書】後から日付を書き換えられない公的な証明書類。代表例：<strong>内容証明郵便</strong>（郵便局が「この内容を○月○日に送った」と証明してくれる）</div>
+  <table class="compare-table" style="margin-top:8px; font-size:0.82em;">
+    <tr>
+      <th>対抗要件の内容</th>
+      <th>債務者Bとの関係</th>
+      <th>二重譲渡での優劣</th>
+    </tr>
+    <tr>
+      <td>口頭での通知・承諾</td>
+      <td class="circle">対抗できる</td>
+      <td class="cross">二重譲渡では不十分</td>
+    </tr>
+    <tr>
+      <td>確定日付ある証書での通知・承諾</td>
+      <td class="circle">対抗できる</td>
+      <td class="circle">Bへの到達が早い方の勝ち</td>
+    </tr>
+  </table>
+  <div class="caution-box" style="margin-top:8px;">
+    ⚠️ 同時に到達した場合 → C・D両者ともBに全額請求できる（Bはどちらかに払えばOK）
+  </div>
+  <p class="page-ref">📖 p.100</p>
+</section>
+
+<!-- ===== S19: 総合比較表 ===== -->
+<section>
+  <h2>📊 対抗要件まとめ — 試験直前チェック</h2>
+  <table class="compare-table" style="font-size:0.78em; margin-top:10px;">
+    <tr>
+      <th>対象</th>
+      <th>対抗要件</th>
+      <th>公信力</th>
+      <th>二重譲渡の決め手</th>
+    </tr>
+    <tr>
+      <td><strong>不動産</strong></td>
+      <td>登記</td>
+      <td class="cross">なし</td>
+      <td>先に登記した方</td>
+    </tr>
+    <tr>
+      <td><strong>動産</strong></td>
+      <td>引渡し</td>
+      <td class="circle">あり</td>
+      <td>先に引渡しを受けた方</td>
+    </tr>
+    <tr>
+      <td><strong>債権</strong></td>
+      <td>通知または承諾（口頭OK）</td>
+      <td>—</td>
+      <td>確定日付ある証書が先に到達した方</td>
+    </tr>
+  </table>
+  <div class="motto" style="margin-top:14px; font-size:1.1em;">
+    🔑 「後」はすべて登記で決まる！<br>
+    債権の二重譲渡は「確定日付」が決め手！
+  </div>
+  <p class="page-ref">📖 p.91〜100</p>
+</section>
+
+<!-- ===== S20: 確認問題① ===== -->
+<section>
+  <h2>✏️ 確認問題① 物権の変動</h2>
+  <div class="exam-q">
+    【問】次の記述のうち、<strong>正しいもの</strong>はどれか。<br>
+    AがBに対して自己所有の土地を売却する場合に関する次の記述のうち、民法の規定によれば正しいものはどれか。
+  </div>
+  <div class="exam-choice">
+    ① AとBが口頭で売買合意をした時点で、所有権はAからBに移転する。✅
+  </div>
+  <div class="wrong-choice">
+    ② 土地の売買契約は、必ず書面（契約書）を作成しなければ成立しない。
+  </div>
+  <div class="wrong-choice">
+    ③ AはBへの所有権移転登記を完了しなければ、売買代金の支払いをBに請求できない。
+  </div>
+  <div class="wrong-choice">
+    ④ AがBへ土地を引き渡すまでは、所有権はAに留まる。
+  </div>
+  <p style="font-size:0.72em; color:#6b7280; margin-top:10px;">
+    ▶ 解説：<strong>①が正解。</strong>民法176条・522条により、契約は意思表示のみで成立し、所有権も移転する（②書面不要、③④引渡し・登記が要件ではない）。ただし登記がないと第三者に対抗できない点に注意（177条）。
+  </p>
+</section>
+
+<!-- ===== S21: 確認問題② ===== -->
+<section>
+  <h2>✏️ 確認問題② 対抗要件・二重譲渡</h2>
+  <div class="exam-q">
+    【問】次の記述のうち、<strong>誤っているもの</strong>はどれか。<br>
+    AがBに土地を売却した後、同じ土地をCにも売却した（二重譲渡）。
+  </div>
+  <div class="wrong-choice">
+    ① BはAより先に登記を移転すれば、Cに対して所有権を主張できる。
+  </div>
+  <div class="wrong-choice">
+    ② CがBより先に売買契約を結んだとしても、登記が先のBが勝つ。
+  </div>
+  <div class="exam-choice">
+    ③ CがBの存在を知っていた（悪意）場合は、いかなる場合もCは登記を得ても所有権を主張できない。✅（これが誤り）
+  </div>
+  <div class="wrong-choice">
+    ④ CがBを困らせる目的だけのために土地を買い登記を得た場合（背信的悪意者）、Bは登記なしでCに対抗できる。
+  </div>
+  <p style="font-size:0.72em; color:#6b7280; margin-top:10px;">
+    ▶ 解説：<strong>③が誤り（＝問われた正解）。</strong>単に悪意であるだけなら登記取得で勝てる（177条）。「背信的悪意者」でなければ悪意でも登記優先。④は正しく、背信的悪意者は「極悪」な第三者として登記なしの相手方に敗れる。
+  </p>
+</section>
+
+<!-- ===== S22: 確認問題③ ===== -->
+<section>
+  <h2>✏️ 確認問題③ 債権譲渡</h2>
+  <div class="exam-q">
+    【問】次の記述のうち、<strong>正しいもの</strong>はどれか。<br>
+    Aは、BのCに対する100万円の貸金債権を譲り受けた（A=譲受人、B=譲渡人、C=債務者）。
+  </div>
+  <div class="exam-choice">
+    ① AがCに債権譲渡を対抗するには、BからCへの通知、またはCの承諾のどれか1つがあれば足りる。✅
+  </div>
+  <div class="wrong-choice">
+    ② 「この債権を第三者に譲渡しない」という譲渡制限の特約があれば、AへのBCの債権譲渡は常に無効となる。
+  </div>
+  <div class="wrong-choice">
+    ③ AがCに対抗するには、必ず内容証明郵便（確定日付ある証書）による通知が必要である。
+  </div>
+  <div class="wrong-choice">
+    ④ AからCへの通知でも、Cに対する対抗要件となる。
+  </div>
+  <p style="font-size:0.72em; color:#6b7280; margin-top:10px;">
+    ▶ 解説：<strong>①が正解。</strong>対抗要件は①BからCへの通知、②CからBへの承諾、③CからAへの承諾の3つのどれかで足りる（口頭可）。②譲渡制限特約があっても譲渡は有効（ただし悪意・重過失の譲受人には拒否可）。③確定日付は二重譲渡の際の優劣決定に必要。④AではなくBから通知すること。
+  </p>
+</section>
+
+<!-- ===== S23: 今日のまとめ ===== -->
+<section>
+  <h2>📝 今日覚えるべきポイント 5つ</h2>
+  <div style="font-size:0.88em;">
+    <div class="key-box" style="margin-bottom:6px;">
+      <strong>① 物権変動 = 意思表示だけでOK</strong><br>
+      口約束だけで契約成立・所有権移転。書面・登記・引渡し不要（質権は例外）
+    </div>
+    <div class="key-box" style="margin-bottom:6px;">
+      <strong>② 危険負担 = 引渡し前の不可抗力滅失 → 売主負担</strong><br>
+      買主は代金支払いを拒否できる（第536条）
+    </div>
+    <div class="key-box" style="margin-bottom:6px;">
+      <strong>③ 不動産の対抗要件 = 登記。「後はすべて登記で決まる！」</strong><br>
+      悪意でも登記があれば勝てる。ただし極悪な6つの第三者は除く
+    </div>
+    <div class="key-box" style="margin-bottom:6px;">
+      <strong>④ 登記には公信力なし。動産の対抗要件は引渡し（公信力あり）</strong>
+    </div>
+    <div class="key-box">
+      <strong>⑤ 債権譲渡の対抗要件 = 通知 or 承諾（口頭OK。二重は確定日付）</strong>
+    </div>
+  </div>
+  <p class="page-ref" style="text-align:center; margin-top:10px;">📖 テキスト p.87〜100</p>
+</section>
+
+<!-- ===== S24: 次回予告 ===== -->
+<section data-background="linear-gradient(135deg, #1e3a5f 0%, #0f766e 100%)">
+  <h2 style="color:white; border-color:#fbbf24;">📅 次回予告</h2>
+  <div style="background:rgba(255,255,255,0.15); border-radius:12px; padding:20px 30px; margin:16px auto; max-width:650px;">
+    <p style="color:#fbbf24; font-size:1.2em; font-weight:bold; margin:0 0 10px 0;">
+      第9回（2026年3月16日）
+    </p>
+    <p style="color:white; font-size:1.1em; font-weight:bold; margin:0;">
+      📋 不動産登記法
+    </p>
+    <p style="color:#d1fae5; font-size:0.85em; margin-top:10px;">
+      テキスト p.101〜120<br>
+      「登記の仕組み・申請手続き・登記記録の読み方」を学習
+    </p>
+  </div>
+  <p style="color:#d1fae5; font-size:0.85em;">
+    今日の「登記が対抗要件」の話と直結します！<br>予習は p.101〜 を読んでくるとスムーズです
+  </p>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/highlight.js"></script>
+<script>
+Reveal.initialize({
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'slide',
+  transitionSpeed: 'fast',
+  width: 1200,
+  height: 700,
+  plugins: [ RevealHighlight ]
+});
+</script>
+</body>
+</html>
